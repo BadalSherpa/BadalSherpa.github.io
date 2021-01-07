@@ -1,0 +1,160 @@
+#connect{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+footer {
+    color: #fff;
+    background-color: #222;
+    padding-top: 50px;
+}
+
+footer h3 {
+    font-weight: 300;
+}
+
+
+
+
+.ull.social-buttons a{
+    display:inline-block;
+    width: 50px;
+    margin: 3px;
+    height: 50px;
+    font-size: 24px;
+    line-height: 50px;
+    outline: 0;
+    color: rgba(255, 255, 255, 0.8);
+    background: #333;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+
+@media screen and (max-width: 480px) {
+    .ull.social-buttons li a {
+        display: block;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        line-height: 40px;
+        outline: 0;
+        color: rgba(255, 255, 255, 0.8);
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .ull.social-buttons li a {
+        width: 37px;
+        height: 37px;
+    }
+}
+
+.ull.social-buttons li a:hover,
+.ull.social-buttons li a:active {
+    color: #FFF;
+    -webkit-box-shadow: 1px 1px 3px #333;
+    -moz-box-shadow: 1px 1px 3px #333;
+    box-shadow: 1px 1px 3px #333;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.list-inline>li {
+    padding: 0px !important;
+}
+
+#facebook,
+#twitter,
+#instagram,
+#linkedin,
+#codepen,
+#github,
+#pinterest,
+#spotify {
+    /*border: 1px solid #fff !important;*/
+}
+
+#facebook:hover {
+    background-color: #3B5998;
+}
+
+#twitter:hover {
+    background-color: #55ACEE;
+}
+
+#instagram:hover {
+    background-color: #3f729b;
+}
+
+#codepen:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+#linkedin:hover {
+    background-color: #0077B5
+}
+
+#github:hover {
+    background-color: #4183C4;
+}
+
+#pinterest:hover {
+    background-color: #CC2127;
+}
+
+#spotify:hover {
+    background-color: #2ebd59;
+}
+
+#to-top {
+    transition: all 0.5s;
+}
+
+#to-top:hover {
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+}
+
+#to-top img {
+    width: 50px;
+    padding: 5px;
+    margin: 10px auto 0px;
+}
+
+#to-top-copy {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    margin: 0 auto;
+    opacity: 0;
+}
+
+
+
+.copyright {
+    font-weight: 300;
+    color: #aaa;
+}
+
+.copyright p {
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    /*text-transform: uppercase;*/
+}
+
+@media screen and (max-width: 480px) {
+    #to-top {
+        margin-top: 0px;
+    }
+    .copyright {
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+}

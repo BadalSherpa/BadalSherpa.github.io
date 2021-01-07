@@ -1,0 +1,61 @@
+/* ======= SERVICES ======= */
+
+#services {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #F0F0F0;
+}
+
+#services h3 {
+    font-weight: 400;
+}
+
+#services p {
+    font-size: 15px;
+    margin: 0px auto 40px auto;
+    max-width: 80%;
+}
+
+#services a {
+    font-weight: 500;
+}
+
+.iconR {
+    width: 175px;
+    height: 175px;
+    line-height: 175px;
+    max-width: 100%;
+    background: #0a192f;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    display:block;
+    color: #FFF;
+    font-size: 55px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto 40px;
+}
+
+.iconR:hover {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all ease .7s;
+    -moz-transition: all ease .7s;
+    transition: all ease .7s;
+}
+
+@media screen and (max-width: 480px) {
+    #services {
+        padding: 60px 10px;
+    }
+    #services h3 {
+        margin-bottom: 20px;
+    }
+    #services p {
+        font-size: 14px;
+        max-width: 100%;
+    }
+}

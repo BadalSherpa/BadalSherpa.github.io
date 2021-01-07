@@ -1,0 +1,88 @@
+.skills{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.skill-icon {
+    padding-bottom: 15px;
+    height: 120px;
+}
+
+.sicon{
+    padding-bottom: 15px;
+    height: 120px;
+}
+
+
+
+.sicon:hover {
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all ease .7s;
+    -moz-transition: all ease .7s;
+    transition: all ease .7s;
+}
+
+
+@media screen and (max-width: 360px) {
+    .skill-icon {
+        padding-bottom: 0;
+        height: 100px;
+    }
+    .sicon{
+        padding-bottom: 0;
+        height: 100px;
+    }
+}
+.skill-icon img {
+    margin: 0 auto;
+    width: 55px;
+    height: auto;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out
+}
+
+.skill-icon img:hover {
+    -webkit-filter: none;
+    filter: none;
+}
+
+.sicon img {
+    margin: 0 auto;
+    width: 75px;
+    height: auto;
+}
+
+
+
+@media screen and (min-width: 450px) {
+    .skill-icon img#html {
+        width: 55px;
+    }
+    .sicon{
+        width: 55px;
+    }
+    .sicon img{
+        width: 55px;
+    }
+    .skill-icon img#css {
+        width: 55px;
+    }
+    .skill-icon img#sass {
+        margin-top: 15px;
+    }
+    .skill-icon img#js {
+        width: 55px;
+    }
+    .skill-icon img#node {
+        width: 100px;
+    }
+}
+
+
+.img-responsive{
+    width: 50px;
+}
