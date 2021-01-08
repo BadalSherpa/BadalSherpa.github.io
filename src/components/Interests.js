@@ -23,12 +23,12 @@ const Interests = () => {
               <h3>Web Development</h3>
               <p>
                 I have always been passionate about web build design and
-                development . Web Development isn't just what a product looks
-                like and feels like on the outside. During the development phase
-                the designs undertaken encompasses the internal functionality of
-                a product as well as the overall user experience. I strive to
-                design interfaces and experiences that people can enjoy on all
-                digital mediums.
+                development. Web Development isn't just what a product looks
+                like and feels like on the outside. During the development
+                phase, the design undertaken encompasses the internal
+                functionality of a product as well as the overall user
+                experience. I strive to design interfaces and experiences that
+                people can enjoy on all digital mediums.
               </p>
             </ScrollAnimation>
           </Col>
@@ -39,12 +39,12 @@ const Interests = () => {
               </div>
               <h3>Competitive Programming</h3>
               <p>
-                Being a Computer Science student and having a string hold in
-                programming languages like Java and C++ . I'm passionate about
+                Being a Computer Science student and having a stronghold in
+                programming languages like Java and C++. I'm passionate about
                 competitive programming as it helps to increase our problem
-                solving skills and helps us bring codes into real worls
-                practise. I am striving to be a good programmer and learning it
-                day by day , I also love to keep my code simple so as to keep it
+                solving skills and helps us bring codes into the real world
+                practice. I am striving to be a good programmer and learning it
+                day by day, I also love to keep my code simple to keep it
                 understandable for every programming enthusiast.
               </p>
             </ScrollAnimation>
@@ -56,17 +56,18 @@ const Interests = () => {
               </div>
               <h3>Study</h3>
               <p>
-                {" "}
-                I am currently pursuing my
-                <em>
+                I am currently pursuing my{" "}
+                <em>Bachelors of Technology in Computer Science Engineering</em>{" "}
+                from
+                <strong>
                   {" "}
-                  Bachelores Tech in Computer Science Engineering
-                </em> from{" "}
-                <strong>Lovely Professional University Phagwara, Punjab</strong>
-                . These day I have been focusing on competitive programming and
-                have been part of many of the online coding contests. I am an
-                enthusiastic learner and believe in working hard and enjoying
-                life aswell.
+                  Lovely Professional University Phagwara, Punjab{" "}
+                </strong>
+                . This day I have been focusing on the development of real-life
+                projects and trying to be a consistent part of competitive
+                programming and have been part of many online coding contests. I
+                am an enthusiastic learner and believe in working hard and
+                enjoying life as well.
               </p>
             </ScrollAnimation>
           </Col>

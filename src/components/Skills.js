@@ -47,8 +47,8 @@ const Skills = () => {
           <div style={{ paddingBottom: "5vh", fontSize: "1.5rem" }}>
             <strong>Skills</strong>
             <p>
-              I've been doing web development for about 1.5 year now, and I'm
-              always eager to learn more in this fast paced industry.
+              I've been doing web development for about two years now, and I'm
+              always eager to learn more in this fast-paced industry.
             </p>
           </div>
           <Row gutter={100}>

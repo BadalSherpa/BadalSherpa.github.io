@@ -135,12 +135,12 @@ const Projects = () => {
                       <h4>SecretsBook</h4>
                       <p>Don't keep your secrets , Share them anonymously</p>
                       <p>
-                        This project is a web application build using MERN ,
-                        Here I have integrated the Google Oauth2 using the
-                        Google developer console and google apis for easy login
-                        and registration of the users. It's a web application
-                        where you can share your secrets anonymously which makes
-                        it fun to share it here.
+                        This project is a web application build using MERN, Here
+                        I have integrated the Google Oauth2 using the Google
+                        developer console and google APIs for easy login and
+                        registration of the users. It's a web application where
+                        you can share your secrets anonymously which makes it
+                        fun to share it here.
                       </p>
 
                       <Col style={{ paddingBottom: "1vh" }}>
@@ -207,11 +207,11 @@ const Projects = () => {
                       <p>Store your notes safely</p>
                       <p>
                         This is a React web application named as NotesKeeper
-                        where we can keep your notes and information . This web
+                        where we can keep your notes and information. This web
                         app helps for easy storing of notes for students and
-                        official workers. This appiclation is based on MERN
-                        stack . This application is hosted in netlify for the
-                        easy hosting.
+                        office workers. This application is based on the MERN
+                        stack. This application is hosted in netlify for easy
+                        hosting.
                       </p>
 
                       <Col style={{ paddingBottom: "1vh" }}>
@@ -283,9 +283,9 @@ const Projects = () => {
                       </p>
                       <p>
                         CodingHumans is a platform where you can find all the
-                        contents, problems and solutions for all kinds of
-                        programming and Computer Science related topics . This
-                        site is hosted in blogger and made using html, Css,
+                        contents, problems, and solutions for all kinds of
+                        programming and Computer Science related topics. This
+                        site is hosted in blogger and made using HTML, CSS,
                         JavaScript and Bootstrap.
                       </p>
 
@@ -352,11 +352,11 @@ const Projects = () => {
                       <h4>Simon Game</h4>
                       <p>Lets test your Memory Power</p>
                       <p>
-                        This is the another version of Simon game created using
-                        just HTML, CSS, and Javascript . It is the exciting game
+                        This is another version of the Simon game created using
+                        just HTML, CSS, and Javascript. It is an exciting game
                         of lights and sounds in which players must repeat random
                         sequences of lights by pressing the colored pads in the
-                        correct order . It's fast-paced play, with lights and
+                        correct order. It's fast-paced play, with lights and
                         sounds that can challenge you.
                       </p>
 
@@ -423,13 +423,13 @@ const Projects = () => {
                       <h4>Drum Kit Virtual Game</h4>
                       <p>Lets test your Memory Power</p>
                       <p>
-                        This is a simple virtual Drum kit player made which can
-                        be played virtually without having access to the real
-                        life , drum . Its can be easily played by small kids to
-                        big adults who wants to have a drum rolling fun😄🤗 To
+                        This is a simple virtual Drum kit player made that can
+                        be played virtually without having access to the
+                        real-life, drum. It can be easily played by small kids
+                        to big adults who want to have a drum rolling fun😄🤗 To
                         play the Drum kit you can simply tap the drum images by
                         tapping it or by pressing the keys shown on the drum kit
-                        images using your keyboard . Play the drum virtually 🥁
+                        images using your keyboard. Play the drum virtually 🥁
                       </p>
 
                       <Col style={{ paddingBottom: "1vh" }}>
@@ -502,12 +502,12 @@ const Projects = () => {
                       <h4>Tindog startup Frontend</h4>
                       <p>Startup Ready Website Frontend</p>
                       <p>
-                        This site can be used as a start up website for the Dog
-                        Lovers . IF Tinder is for humans why not TinDog for
-                        dogs. Her your can see all the positions and features of
-                        designes like cards, carousels designed using Bootstrap
-                        framework,Html ,css . Note this site only have frontend
-                        features right now
+                        This site can be used as a start-up website for the Dog
+                        Lovers. IF Tinder is for humans why not TinDog for dogs.
+                        Here you can see all the positions and features of
+                        designs like cards, carousels designed using Bootstrap
+                        framework, Html,CSS. Note this site only have the
+                        frontend features right now
                       </p>
 
                       <Col style={{ paddingBottom: "1vh" }}>

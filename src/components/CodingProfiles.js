@@ -36,20 +36,19 @@ const CodingProfiles = () => {
               marginBottom: 20,
             }}
           >
-            I believe that competitive coding helps us to do better in other
-            subjects that we’re studying or learning. Within programming, we
-            learn how to break down a problem into individual steps and to use a
-            language that the computer understands to logically create a working
-            program. In doing so, we develop a certain mindset on approaching
-            problems and processing large amounts of information that is
-            necessary with conquering any new topic. In other words, We learn to
-            look at problems from a bigger picture and in a different
-            persceptive and adapt to working through the frustrations of hitting
-            brick walls to solve issues. So this are my coding profile where i
-            have been coding whilch helps my thinking to improve first, before
-            actually learning the what.
+            I believe that competitive coding helps us improve our
+            problem-solving skills. Within programming, we learn how to break
+            down a problem into individual steps and to use a language that the
+            computer understands to logically create a working program. In doing
+            so, we develop a certain mindset on approaching problems and
+            processing large amounts of information that is necessary for
+            conquering any new topic. In other words, We learn to look at the
+            problems from a bigger picture and a different perspective and adapt
+            to working through the frustrations of hitting brick walls to solve
+            issues. These are the coding profiles I have been part of which
+            helps in enhancing my thinking capability.
             <br />
-            Lastly I believe Learning to code is more than just learning a
+            Lastly, I believe Learning to code is more than just learning a
             computer language – it’s about creating an effective and productive
             mindset towards problem-solving that will positively affect any new
             intellectual endeavor we take on.

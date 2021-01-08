@@ -22,31 +22,32 @@ const About = () => {
             </ScrollAnimation>
             <ScrollAnimation duration='3' animateIn='swing'>
               <p>
-                Hey!{" "}
+                Hey!
                 <img
                   src='https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif'
                   width='30px'
                   alt='Hello from Badal Changba'
-                ></img>
-                😄 my name is Badal Sherpa and I'm a Full Stack Web Developer
-                with a passion for frontend web designing and back end
-                development. I'm currently a 3rd year student pursuing Bachelor
-                of Technology in Computer Science from
+                ></img>{" "}
+                😄 my name is Badal Sherpa. I'm a Full Stack Web Developer with
+                a passion for Frontend web designing and back end development.
+                I'm currently a 3rd-year student pursuing a Bachelor of
+                Technology in Computer Science from{" "}
                 <a href='https://www.lpu.in/'>
-                  <bold> Lovely Professional University, Punjab</bold>
+                  {" "}
+                  <bold> Lovely Professional University </bold>{" "}
                 </a>
-                . As being from a computer science student my interests lies in
-                programming and learning new technical stuffs. I am an
+                , Punjab. Being from a computer science background my interests
+                lie in programming and learning new technical stuff. I am an
                 enthusiastic Competitive programming learner and believe in
-                working hard and enjoying life aswell.
+                working hard and enjoying life as well.
               </p>
               <p>
-                I am from 4th mile Sukhia Pokhri, Darjeeling , West Bengal India
-                . I love designing web frontend websites with good catchy styles
-                and theme Apart from technical things ,I am also interested in
-                gaming , watching technical blogs , and sports . My hobbies are
-                listening to songs, singing, watching anime, playing volley ball
-                and football during my leisure hours .
+                I am from 4th-mile Sukhia Pokhri, Darjeeling, West Bengal,
+                India. I love designing web frontend websites with catchy styles
+                and themes. Apart from technical things, I am also interested in
+                gaming, watching technical blogs, and sports. My hobbies are
+                listening to songs, singing, watching anime, playing volleyball
+                and football during my leisure hours.{" "}
               </p>
             </ScrollAnimation>
           </div>
