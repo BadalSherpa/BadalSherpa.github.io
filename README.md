@@ -3,7 +3,7 @@
 This is my personal portfolio build using ReactJs and Ant design Framework with some react animations . Get to know me more by visiting my online website portfolio
 
  
-# [![Portfolio Website](https://img.shields.io/badge/Portfolio%20website-yellow)](https://badalsherpa.github.io/BadalSherpa_/)  ![visitors](https://visitor-badge.laobi.icu/badge?page_id=BadalSherpa.visitor-badge)   ![GitHub stars](https://img.shields.io/github/stars/BadalSherpa/BadalSherpa?style=social)  
+# [![Portfolio Website](https://img.shields.io/badge/Portfolio%20website-yellow)](https://badalsherpa.github.io/)  ![visitors](https://visitor-badge.laobi.icu/badge?page_id=BadalSherpa.visitor-badge)   ![GitHub stars](https://img.shields.io/github/stars/BadalSherpa/BadalSherpa?style=social)  
 
 ### Visit my technical website [www.CodingHumans.xyz][codinghumans] to learn and hone up your Knowledge
 
