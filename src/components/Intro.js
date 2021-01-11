@@ -15,7 +15,7 @@ const Intro = () => {
       <div class='overlay'>
         <div className='intro-content'>
           <h1 class='animated fadeInDown'>Hi, I'm Badal Sherpa</h1>
-          <p class='subtitle animated fadeInUp delay-05s'>
+          <p class='subtitle animated fadeInUp delay-01s'>
             <Typing speed={200} cursor='|'>
               <span
                 style={{
@@ -25,7 +25,7 @@ const Intro = () => {
                   textShadow: "3px 0 #DA0463",
                 }}
               >
-                Full Stack Web Developer | Problem Solver | Data Science
+                Full Stack Web Developer | Problem Solving | Data Science
                 Enthusiast
               </span>
             </Typing>
