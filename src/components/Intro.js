@@ -36,7 +36,6 @@ const Intro = () => {
             spy={true}
             smooth={true}
             duration={500}
-            delay={700}
           >
             <i class='fa fa-angle-down page-scroll'></i>
           </Link>

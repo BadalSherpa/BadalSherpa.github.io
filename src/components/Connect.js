@@ -33,6 +33,12 @@ const Connect = () => {
             <a id='github' href='https://github.com/BadalSherpa'>
               <i class='fa fa-github'></i>
             </a>
+            <a
+              id='stackoverflow'
+              href='https://stackoverflow.com/users/13983584/badal-sherpa'
+            >
+              <i class='fa fa-stack-overflow'></i>
+            </a>
 
             <a id='twitter' href='https://twitter.com/SherpaBadal'>
               <i class='fa fa-twitter'></i>
