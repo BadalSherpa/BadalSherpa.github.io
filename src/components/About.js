@@ -1,19 +1,19 @@
-import React from "react";
-import { Col } from "antd";
-import Profile from "../images/badalChangba.jpg";
-import ScrollAnimation from "react-animate-on-scroll";
-import { Element } from "react-scroll";
-import "./About.css";
+import React from 'react';
+import { Col } from 'antd';
+import Profile from '../images/badalChangba.jpg';
+import ScrollAnimation from 'react-animate-on-scroll';
+import { Element } from 'react-scroll';
+import './About.css';
 
 const About = () => {
   return (
     <Element id='about' name='about' className='element'>
       <ScrollAnimation animateIn='fadeIn'>
-        <Col style={{ textAlign: "center", background: "white" }}>
+        <Col style={{ textAlign: 'center', background: 'white' }}>
           <div>
             <div
               data-aos='fade-up'
-              style={{ paddingBottom: "5vh", fontSize: "1.5rem" }}
+              style={{ paddingBottom: '5vh', fontSize: '1.5rem' }}
             >
               <strong>About Me</strong>
             </div>
@@ -27,14 +27,13 @@ const About = () => {
                   src='https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif'
                   width='30px'
                   alt='Hello from Badal Changba'
-                ></img>{" "}
+                ></img>{' '}
                 😄 my name is Badal Sherpa. I'm a Full Stack Web Developer with
-                a passion for Frontend web designing and back end development.
-                I'm currently a 3rd-year student pursuing a Bachelor of
-                Technology in Computer Science from{" "}
+                a passion for Frontend web designing and back end development. I
+                pursued my Bachelor of Technology in Computer Science from{' '}
                 <a href='https://www.lpu.in/'>
-                  {" "}
-                  <bold> Lovely Professional University </bold>{" "}
+                  {' '}
+                  <bold> Lovely Professional University </bold>{' '}
                 </a>
                 , Punjab. Being from a computer science background my interests
                 lie in programming and learning new technical stuff. I am an
@@ -47,7 +46,7 @@ const About = () => {
                 and themes. Apart from technical things, I am also interested in
                 gaming, watching technical blogs, and sports. My hobbies are
                 listening to songs, singing, watching anime, playing volleyball
-                and football during my leisure hours.{" "}
+                and football during my leisure hours.{' '}
               </p>
             </ScrollAnimation>
           </div>
