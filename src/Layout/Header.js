@@ -1,7 +1,7 @@
-import React from "react";
-import "antd/dist/antd.css";
-import { Link } from "react-scroll";
-import "./Header.css";
+import React from 'react';
+import 'antd/dist/antd.css';
+import { Link } from 'react-scroll';
+import './Header.css';
 
 import {
   AboutIcon,
@@ -12,10 +12,9 @@ import {
   ProjectIcon,
   CertificationIcon,
   ContactIcon,
-} from "../images/icons";
-
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
+} from '../images/icons';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 
 const CustomHeader = () => {
   return (
@@ -24,7 +23,7 @@ const CustomHeader = () => {
       collapseOnSelect
       expand='lg'
       variant='dark'
-      style={{ background: "black" }}
+      style={{ background: 'black' }}
     >
       <Navbar.Brand href='https://www.linkedin.com/in/badal-sherpa-5799a9196/'>
         <i class='fas fa-user-secret' /> Badal Sherpa
@@ -39,7 +38,7 @@ const CustomHeader = () => {
           </Link>
           <Link to='services' spy={true} smooth={true} duration={500}>
             <Nav.Link href='/'>
-              <InterestIcon></InterestIcon> INTERESTS
+              <InterestIcon></InterestIcon> INTERESTSS
             </Nav.Link>
           </Link>
           <Link to='skills' spy={true} smooth={true} duration={500}>
