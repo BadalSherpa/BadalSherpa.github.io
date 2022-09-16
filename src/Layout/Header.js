@@ -38,7 +38,7 @@ const CustomHeader = () => {
           </Link>
           <Link to='services' spy={true} smooth={true} duration={500}>
             <Nav.Link href='/'>
-              <InterestIcon></InterestIcon> INTERESTSS
+              <InterestIcon></InterestIcon> INTERESTS
             </Nav.Link>
           </Link>
           <Link to='skills' spy={true} smooth={true} duration={500}>
