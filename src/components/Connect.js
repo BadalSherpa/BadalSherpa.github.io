@@ -43,14 +43,6 @@ const Connect = () => {
             <a id='twitter' href='https://twitter.com/SherpaBadal'>
               <i class='fa fa-twitter'></i>
             </a>
-
-            <a id='instagram' href='https://www.instagram.com/_sans7_/'>
-              <i class='fa fa-instagram'></i>
-            </a>
-
-            <a id='facebook' href='https://www.facebook.com/sangay.chan/'>
-              <i class='fa fa-facebook'></i>
-            </a>
           </ScrollAnimation>
         </div>
       </Col>
