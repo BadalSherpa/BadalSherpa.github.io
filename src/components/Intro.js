@@ -25,8 +25,7 @@ const Intro = () => {
                   textShadow: "3px 0 #DA0463",
                 }}
               >
-                Full Stack Web Developer | Problem Solving | Data Science
-                Enthusiast
+                Full Stack Web Developer | React JS | React Native | MERN | Problem Solving Enthusiast
               </span>
             </Typing>
           </p>
