@@ -11,7 +11,7 @@ export const profile = {
   hometown: "Sukhia Pokhri, Darjeeling",
   email: "badalsherpa7@gmail.com",
   resume: "/Badal_Sherpa_Resume.pdf",
-  photo: "/images/badal.jpg",
+  photo: "/images/badal-sherpa-2026.jpg",
   summary:
     "Lead Software Engineer with 6+ years of experience designing and building scalable web and mobile applications end to end — responsive front ends with React, Next.js and TypeScript, and backend services with Node.js and Express, including REST API design, data modeling and integrations backed by PostgreSQL and MongoDB.",
   about:

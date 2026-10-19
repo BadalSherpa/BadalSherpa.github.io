@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description: "React.js · Next.js · TypeScript · Node.js. Building calm, fast interfaces for complex products.",
     url: "https://badalsherpa.github.io",
     siteName: "Badal Sherpa",
-    images: ["/images/badal.jpg"],
+    images: ["/images/badal-sherpa-2026.jpg"],
     type: "website",
   },
 };

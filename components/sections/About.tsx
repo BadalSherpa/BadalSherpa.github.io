@@ -31,7 +31,7 @@ function DevPass() {
         whileTap={{ scale: 0.98 }}
         style={{ x, y, rotateZ, rotateX }}
         data-cursor={flipped ? "Flip back" : "Drag · Flip"}
-        className="relative aspect-[3/4.5] w-full touch-none select-none [perspective:1400px]"
+        className="relative aspect-[3/5.25] w-full touch-none select-none [perspective:1400px]"
         role="button"
         tabIndex={0}
         aria-label="Developer pass card. Press to flip."
@@ -53,7 +53,7 @@ function DevPass() {
               <span>Dev pass</span>
               <span>No. 2020</span>
             </div>
-            <div className="relative mt-3 aspect-[4/3.9] overflow-hidden rounded-2xl">
+            <div className="relative mt-3 aspect-[3/3.8] overflow-hidden rounded-2xl">
               <Image
                 src={profile.photo}
                 alt={`Portrait of ${profile.name}`}
@@ -63,9 +63,7 @@ function DevPass() {
                 draggable={false}
                 className="object-cover object-[50%_30%]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-br from-violet/25 via-transparent to-amber/20 mix-blend-overlay" />
-              <span className="absolute bottom-3 left-3 rounded-full bg-white/15 px-3 py-1 text-[10px] font-medium uppercase tracking-widest backdrop-blur">
+              <span className="absolute bottom-3 left-3 rounded-full bg-ink/55 px-3 py-1 text-[10px] font-medium uppercase tracking-widest backdrop-blur">
                 Lead · Frontend
               </span>
             </div>
