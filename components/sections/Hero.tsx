@@ -141,9 +141,9 @@ export default function Hero() {
           <div>
             <p className="hero-fade max-w-xl text-lg leading-relaxed text-muted">
               <RoleTicker />
-              6+ years shipping enterprise products for <span className="text-white">HUB International</span> and{" "}
-              <span className="text-white">Paytm</span> — from React and Next.js front ends to Node.js APIs and
-              databases.
+              6+ years shipping <span className="text-white">production-grade products</span> for{" "}
+              <span className="text-white">large enterprises and high-scale platforms</span> — from React and Next.js
+              front ends to Node.js APIs and databases.
             </p>
             <div className="hero-fade mt-8 flex flex-wrap items-center gap-3">
               <Magnetic>

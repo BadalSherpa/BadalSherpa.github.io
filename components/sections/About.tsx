@@ -31,7 +31,7 @@ function DevPass() {
         whileTap={{ scale: 0.98 }}
         style={{ x, y, rotateZ, rotateX }}
         data-cursor={flipped ? "Flip back" : "Drag · Flip"}
-        className="relative aspect-[3/4.5] w-full touch-none select-none"
+        className="relative aspect-[3/4.5] w-full touch-none select-none [perspective:1400px]"
         role="button"
         tabIndex={0}
         aria-label="Developer pass card. Press to flip."
@@ -61,7 +61,7 @@ function DevPass() {
                 sizes="340px"
                 priority
                 draggable={false}
-                className="object-cover object-[50%_25%]"
+                className="object-cover object-[50%_30%]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-br from-violet/25 via-transparent to-amber/20 mix-blend-overlay" />

@@ -193,7 +193,9 @@ export default function Contact() {
           </div>
           <div className="mt-14 flex flex-col justify-between gap-3 text-xs text-muted sm:flex-row">
             <p>© {new Date().getFullYear()} {profile.name}. Designed & built with Next.js, GSAP & Framer Motion.</p>
-            <p>Made with care in Gurugram, from Darjeeling ✦</p>
+            <p>
+              Made with <span className="text-pink">♥</span> in India, from Darjeeling
+            </p>
           </div>
         </footer>
       </div>

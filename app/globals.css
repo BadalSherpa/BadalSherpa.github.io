@@ -74,10 +74,13 @@ html.lenis body {
   }
 }
 
-/* Gradient hairline border for cards */
+/* Gradient hairline border for cards. Kept in the components layer so
+   utilities like `absolute` can still override its positioning. */
+@layer components {
 .gradient-border {
   position: relative;
   isolation: isolate;
+}
 }
 .gradient-border::before {
   content: "";
