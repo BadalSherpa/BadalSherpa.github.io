@@ -1,53 +1,37 @@
 {
-  "homepage": "https://BadalSherpa.github.io",
-  "name": "BadalSherpa",
+  "name": "badalsherpa-portfolio",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "antd": "^4.9.4",
-    "bootstrap": "^4.5.3",
-    "cra-template": "1.1.1",
-    "gh-pages": "^3.1.0",
-    "radium": "^0.26.1",
-    "react": "^17.0.1",
-    "react-animate-on-scroll": "^2.1.5",
-    "react-bootstrap": "^1.4.0",
-    "react-dom": "^17.0.1",
-    "react-icons": "^4.1.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.1",
-    "react-scroll": "^1.8.1",
-    "react-typing-animation": "^1.6.2",
-    "styled-components": "^5.2.1"
-  },
   "scripts": {
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out --dotfiles"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "clsx": "^2.1.1",
+    "framer-motion": "^14.4.0",
+    "gsap": "^3.15.0",
+    "lenis": "^1.3.27",
+    "next": "16.4.2",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.2",
+    "gh-pages": "^6.3.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   },
-  "description": "My personal Portfolio based on React",
-  "main": "index.js",
+  "description": "Personal portfolio of Badal Sherpa — Next.js, TypeScript, GSAP, Framer Motion",
   "author": "Badal Sherpa",
-  "license": "MIT"
+  "homepage": "https://badalsherpa.github.io"
 }
