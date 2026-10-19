@@ -122,14 +122,6 @@ export default function Hero() {
       </div>
 
       <div ref={content} className="relative mx-auto w-full max-w-6xl will-change-transform">
-        <div className="hero-fade mb-8 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs text-muted backdrop-blur">
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
-          </span>
-          {profile.availability} · {profile.location}
-        </div>
-
         <p className="hero-fade mb-4 font-mono text-sm text-muted">Hi, I&apos;m {profile.name} —</p>
 
         <h1 className="text-[clamp(2.9rem,9.2vw,8.6rem)] font-medium leading-[0.92] tracking-[-0.045em]">
@@ -149,9 +141,9 @@ export default function Hero() {
           <div>
             <p className="hero-fade max-w-xl text-lg leading-relaxed text-muted">
               <RoleTicker />
-              Nearly seven years shipping enterprise products for{" "}
-              <span className="text-white">HUB International</span> and <span className="text-white">Paytm</span> with
-              React, Next.js and TypeScript.
+              6+ years shipping enterprise products for <span className="text-white">HUB International</span> and{" "}
+              <span className="text-white">Paytm</span> — from React and Next.js front ends to Node.js APIs and
+              databases.
             </p>
             <div className="hero-fade mt-8 flex flex-wrap items-center gap-3">
               <Magnetic>

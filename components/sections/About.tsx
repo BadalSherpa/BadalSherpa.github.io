@@ -159,14 +159,14 @@ export default function About() {
 
           <Reveal className="mt-12 grid gap-4 sm:grid-cols-2">
             <div className="gradient-border rounded-2xl bg-white/[0.02] p-6">
-              <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted">Currently</p>
+              <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted">Most recently</p>
               <p className="mt-3 text-lg font-medium">Lead Software Engineer</p>
               <p className="text-sm text-muted">Virtusa · Client: HUB International</p>
             </div>
             <div className="gradient-border rounded-2xl bg-white/[0.02] p-6">
               <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted">Focus</p>
-              <p className="mt-3 text-lg font-medium">SSR, Core Web Vitals & a11y</p>
-              <p className="text-sm text-muted">GraphQL & REST integration at scale</p>
+              <p className="mt-3 text-lg font-medium">UI → API → Database</p>
+              <p className="text-sm text-muted">React, Next.js, Node.js, PostgreSQL & MongoDB</p>
             </div>
           </Reveal>
 

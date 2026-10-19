@@ -77,6 +77,11 @@ export default function Experience() {
                       >
                         <div className="pb-10 md:pl-16">
                           <p className="mb-6 font-mono text-xs text-muted md:hidden">{job.period}</p>
+                          {job.progression && (
+                            <p className="mb-6 inline-flex rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-xs text-white/75">
+                              {job.progression}
+                            </p>
+                          )}
                           <div className="grid gap-6 lg:grid-cols-2">
                             {job.engagements.map((eng, ei) => (
                               <motion.div
@@ -89,8 +94,9 @@ export default function Experience() {
                                   job.engagements.length === 1 && "lg:col-span-2"
                                 )}
                               >
-                                <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted">
-                                  Client
+                                <p className="flex justify-between gap-4 font-mono text-[10px] uppercase tracking-[0.25em] text-muted">
+                                  <span>Client</span>
+                                  {eng.period && <span>{eng.period}</span>}
                                 </p>
                                 <p className="mt-2 text-xl font-medium">
                                   {eng.client} <span className="text-muted">— {eng.product}</span>
