@@ -64,7 +64,7 @@ function DevPass() {
                 className="object-cover object-[50%_30%]"
               />
               <span className="absolute bottom-3 left-3 rounded-full bg-ink/55 px-3 py-1 text-[10px] font-medium uppercase tracking-widest backdrop-blur">
-                Lead · Frontend
+                Full Stack Engineer
               </span>
             </div>
             <div className="mt-4">
