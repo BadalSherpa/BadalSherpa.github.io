@@ -6,9 +6,9 @@ import { process } from "@/lib/data";
 import SectionHeading from "../SectionHeading";
 
 const accents = [
-  "from-violet/40 via-violet/10",
-  "from-pink/40 via-pink/10",
-  "from-amber/40 via-amber/10",
+  "orb-violet",
+  "orb-pink",
+  "orb-amber",
 ];
 
 export default function Process() {
@@ -25,7 +25,6 @@ export default function Process() {
         gsap.to(card.querySelector(".process-inner"), {
           scale: 0.9,
           opacity: 0.35,
-          filter: "blur(2px)",
           ease: "none",
           scrollTrigger: { trigger: next, start: "top bottom", end: "top 20%", scrub: true },
         });
@@ -45,7 +44,7 @@ export default function Process() {
               <div className="process-inner gradient-border relative origin-top overflow-hidden rounded-[32px] bg-ink-2 p-8 sm:p-12">
                 <div
                   aria-hidden
-                  className={`pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-gradient-to-br ${accents[i]} to-transparent blur-2xl`}
+                  className={`orb ${accents[i]} -right-32 -top-32 h-[28rem] w-[28rem]`}
                 />
                 <div className="relative grid gap-8 md:grid-cols-[auto_1fr_1fr] md:items-center md:gap-14">
                   <span className="text-gradient font-serif text-7xl italic leading-none sm:text-8xl">{p.step}</span>

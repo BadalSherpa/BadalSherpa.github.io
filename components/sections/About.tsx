@@ -59,7 +59,6 @@ function DevPass() {
                 alt={`Portrait of ${profile.name}`}
                 fill
                 sizes="340px"
-                priority
                 draggable={false}
                 className="object-cover object-[50%_30%]"
               />
@@ -87,7 +86,7 @@ function DevPass() {
 
           {/* Back */}
           <div className="gradient-border absolute inset-0 flex flex-col overflow-hidden rounded-[28px] bg-ink-2 p-6 [backface-visibility:hidden] [transform:rotateY(180deg)]">
-            <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-pink/30 blur-3xl" />
+            <div className="orb orb-pink -right-24 -top-24 h-72 w-72" />
             <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted">Off the clock</p>
             <p className="mt-3 font-serif text-3xl italic leading-tight">
               From the hills of <span className="text-gradient">Darjeeling</span>.

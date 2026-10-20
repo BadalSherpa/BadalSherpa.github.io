@@ -15,7 +15,7 @@ export const profile = {
   summary:
     "Lead Software Engineer with 6+ years of experience designing and building scalable web and mobile applications end to end — responsive front ends with React, Next.js and TypeScript, and backend services with Node.js and Express, including REST API design, data modeling and integrations backed by PostgreSQL and MongoDB.",
   about:
-    "I build products end to end — from UI to API to database. I've delivered enterprise products for HUB International and Paytm, led an Angular-to-React migration, and was promoted from Senior to Lead for technical leadership, code-review quality and mentoring. I use AI-assisted tools like Claude Code, Copilot and Cursor to ship faster without compromising quality.",
+    "I build products end to end — from UI to API to database. I've delivered enterprise products, led an Angular-to-React migration, and was promoted from Senior to Lead for technical leadership, code-review quality and mentoring. I use AI-assisted tools like Claude Code, Copilot and Cursor to ship faster without compromising quality.",
   roles: [
     "Lead Software Engineer",
     "React & Next.js Specialist",

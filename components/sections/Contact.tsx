@@ -55,7 +55,9 @@ export default function Contact() {
   return (
     <section id="contact" ref={root} className="relative overflow-hidden px-5 pt-16 sm:px-8 md:pt-24">
       <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="absolute bottom-[-30%] left-1/2 h-[70vmax] w-[70vmax] -translate-x-1/2 rounded-full bg-gradient-to-tr from-violet/35 via-pink/25 to-amber/25 blur-[140px]" />
+        <div className="orb orb-violet bottom-[-45%] left-[-15%] h-[85vmax] w-[85vmax]" />
+        <div className="orb orb-pink bottom-[-50%] left-[20%] h-[85vmax] w-[85vmax]" />
+        <div className="orb orb-amber bottom-[-55%] right-[-20%] h-[80vmax] w-[80vmax]" />
         <div className="bg-grid absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_40%,transparent)]" />
       </div>
 

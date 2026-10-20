@@ -16,7 +16,7 @@ function Cover({ project, index }: { project: Project; index: number }) {
     >
       {/* Abstract composition, unique per card via index-based offsets */}
       <div
-        className="absolute h-[140%] w-[70%] rounded-full bg-white/20 blur-2xl transition-transform duration-[1.2s] ease-[cubic-bezier(.22,1,.36,1)] group-hover:translate-x-[20%] group-hover:scale-110"
+        className="absolute h-[140%] w-[70%] rounded-full bg-[radial-gradient(closest-side,rgba(255,255,255,0.4),transparent)] transition-transform duration-[1.2s] ease-[cubic-bezier(.22,1,.36,1)] group-hover:translate-x-[20%] group-hover:scale-110"
         style={{ left: `${(index * 17) % 60}%`, top: "-20%" }}
       />
       <div className="absolute inset-0 bg-grid opacity-40 mix-blend-overlay" />
@@ -37,7 +37,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
     <Wrapper
       {...(project.href ? { href: project.href, target: "_blank", rel: "noreferrer", "data-cursor": "Visit" } : {})}
-      className="work-card group gradient-border flex w-full shrink-0 flex-col rounded-3xl bg-ink-2/80 p-3 backdrop-blur md:w-[min(560px,42vw)]"
+      className="work-card group gradient-border flex w-full shrink-0 flex-col rounded-3xl bg-ink-2 p-3 md:w-[min(560px,42vw)]"
     >
       <Cover project={project} index={index} />
       <div className="flex flex-1 flex-col p-4 pt-6">
@@ -121,7 +121,7 @@ export default function Work() {
 
   return (
     <section id="work" ref={root} className="relative overflow-hidden py-24 md:flex md:h-[100svh] md:flex-col md:justify-center md:py-0">
-      <div aria-hidden className="pointer-events-none absolute right-[-10%] top-1/4 h-[40vmax] w-[40vmax] rounded-full bg-violet/15 blur-[140px]" />
+      <div aria-hidden className="orb orb-violet orb-soft right-[-25%] top-[5%] h-[70vmax] w-[70vmax]" />
 
       <div className="mx-auto mb-12 flex w-full max-w-6xl items-end justify-between gap-6 px-5 sm:px-8 md:mb-10">
         <SectionHeading index="02" eyebrow="Selected work" title="Products I've" accent="helped bring to life." />

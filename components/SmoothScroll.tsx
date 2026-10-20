@@ -30,6 +30,9 @@ export function setScrollLocked(locked: boolean) {
 export default function SmoothScroll() {
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    // Touch devices already have native momentum scrolling; Lenis would only add
+    // a per-frame JS loop there.
+    if (window.matchMedia("(pointer: coarse)").matches) return;
 
     const lenis = new Lenis({ lerp: 0.09, smoothWheel: true });
     lenisInstance = lenis;

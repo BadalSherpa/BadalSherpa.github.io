@@ -68,7 +68,7 @@ export default function Nav() {
         <nav
           className={clsx(
             "mx-auto flex max-w-6xl items-center justify-between rounded-full px-3 py-2 transition-all duration-500",
-            scrolled || open ? "border border-white/10 bg-ink/60 backdrop-blur-xl" : "border border-transparent"
+            scrolled || open ? "border border-white/10 bg-ink/90 md:bg-ink/60 md:backdrop-blur-xl" : "border border-transparent"
           )}
         >
           <a
@@ -159,7 +159,7 @@ export default function Nav() {
             transition={{ duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
             className="fixed inset-0 z-40 flex flex-col justify-end bg-ink-2 px-6 pb-12 pt-28 md:hidden"
           >
-            <div className="pointer-events-none absolute -right-20 top-10 h-72 w-72 rounded-full bg-pink/30 blur-[100px]" />
+            <div className="orb orb-pink -right-40 -top-10 h-[28rem] w-[28rem]" />
             <ul className="space-y-2">
               {nav.map((item, i) => (
                 <li key={item.href} className="overflow-hidden">
