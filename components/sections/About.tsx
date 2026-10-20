@@ -137,7 +137,7 @@ export default function About() {
   );
 
   return (
-    <section id="about" className="relative px-5 py-28 sm:px-8 md:py-40">
+    <section id="about" className="relative px-5 py-20 sm:px-8 md:py-40">
       <div className="mx-auto grid max-w-6xl gap-16 md:grid-cols-[1fr_1.35fr] md:gap-20">
         <Reveal className="md:sticky md:top-24 md:self-start">
           <DevPass />

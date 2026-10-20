@@ -32,6 +32,9 @@
 html {
   background: var(--ink);
   color-scheme: dark;
+  /* Safety net: decorative glows must never widen the page on phones.
+     `clip` (unlike `hidden`) doesn't break position: sticky. */
+  overflow-x: clip;
 }
 
 body {

@@ -12,7 +12,7 @@ export default function Experience() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="experience" className="relative px-5 py-28 sm:px-8 md:py-40">
+    <section id="experience" className="relative px-5 py-20 sm:px-8 md:py-40">
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <SectionHeading index="03" eyebrow="Experience" title="Where I've" accent="made an impact." />
@@ -134,19 +134,24 @@ export default function Experience() {
           })}
 
           <Reveal delay={0.16}>
-            <div className="grid grid-cols-[1fr_auto] items-center gap-4 border-b border-white/10 py-8 md:grid-cols-[2fr_2fr_1.2fr_auto]">
+            <div className="grid grid-cols-1 items-center gap-4 border-b border-white/10 py-8 md:grid-cols-[2fr_2fr_1.2fr_auto]">
               <span className="flex items-center gap-4">
                 <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/[0.02] text-lg">
                   🎓
                 </span>
-                <span>
+                <span className="min-w-0">
                   <span className="block text-2xl font-medium tracking-tight md:text-3xl">LPU</span>
-                  <span className="text-sm text-muted">{education.school}</span>
+                  <span className="block text-sm text-muted">{education.school}</span>
+                  {/* Phones: degree, years and score stack under the name instead of squeezing a column. */}
+                  <span className="mt-1 block text-sm text-white/70 md:hidden">{education.degree}</span>
+                  <span className="mt-1 block font-mono text-xs text-muted md:hidden">
+                    {education.period} · {education.score}
+                  </span>
                 </span>
               </span>
               <span className="hidden text-lg text-white/80 md:block">{education.degree}</span>
               <span className="hidden font-mono text-sm text-muted md:block">{education.period}</span>
-              <span className="rounded-full border border-white/10 px-3 py-1 font-mono text-xs text-muted">
+              <span className="hidden rounded-full border border-white/10 px-3 py-1 font-mono text-xs text-muted md:inline-block">
                 {education.score}
               </span>
             </div>

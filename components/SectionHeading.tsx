@@ -45,7 +45,7 @@ export default function SectionHeading({
 }) {
   return (
     <div className={className}>
-      <Reveal className="mb-6 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.3em] text-muted">
+      <Reveal className="mb-6 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.18em] text-muted sm:tracking-[0.3em]">
         <span className="text-gradient">{index}</span>
         <span className="h-px w-10 bg-white/20" />
         {eyebrow}

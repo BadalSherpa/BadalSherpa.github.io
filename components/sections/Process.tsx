@@ -34,7 +34,7 @@ export default function Process() {
   );
 
   return (
-    <section ref={root} className="relative px-5 py-28 sm:px-8 md:py-40">
+    <section ref={root} className="relative px-5 py-20 sm:px-8 md:py-40">
       <div className="mx-auto max-w-6xl">
         <SectionHeading index="05" eyebrow="How I work" title="A calm process" accent="for complex products." />
 

@@ -157,7 +157,7 @@ export default function Nav() {
             animate={{ clipPath: "circle(150% at 100% 0%)" }}
             exit={{ clipPath: "circle(0% at 100% 0%)" }}
             transition={{ duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
-            className="fixed inset-0 z-40 flex flex-col justify-end bg-ink-2 px-6 pb-12 pt-28 md:hidden"
+            className="fixed inset-0 z-40 flex flex-col justify-end overflow-hidden bg-ink-2 px-6 pb-12 pt-28 md:hidden"
           >
             <div className="orb orb-pink -right-40 -top-10 h-[28rem] w-[28rem]" />
             <ul className="space-y-2">

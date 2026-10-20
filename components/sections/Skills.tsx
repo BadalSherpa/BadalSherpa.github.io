@@ -14,7 +14,7 @@ function trackSpotlight(e: PointerEvent<HTMLDivElement>) {
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative px-5 py-28 sm:px-8 md:py-40">
+    <section id="skills" className="relative overflow-x-clip px-5 py-20 sm:px-8 md:py-40">
       <div aria-hidden className="orb orb-pink orb-soft left-[-25%] top-[20%] h-[70vmax] w-[70vmax]" />
       <div className="mx-auto max-w-6xl">
         <SectionHeading index="04" eyebrow="Toolkit" title="The stack behind" accent="the craft." />

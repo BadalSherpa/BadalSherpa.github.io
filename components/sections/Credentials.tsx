@@ -67,7 +67,7 @@ function TiltCard({ cert, index }: { cert: (typeof certifications)[number]; inde
 
 export default function Credentials() {
   return (
-    <section id="credentials" className="relative px-5 py-28 sm:px-8 md:py-40">
+    <section id="credentials" className="relative px-5 py-20 sm:px-8 md:py-40">
       <div className="mx-auto max-w-6xl">
         <SectionHeading index="06" eyebrow="Credentials & playground" title="Always learning," accent="always solving." />
 

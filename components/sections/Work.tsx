@@ -22,7 +22,7 @@ function Cover({ project, index }: { project: Project; index: number }) {
       <div className="absolute inset-0 bg-grid opacity-40 mix-blend-overlay" />
       <div className="absolute -bottom-10 -right-10 h-52 w-52 rounded-full border border-white/40 transition-transform duration-[1.2s] ease-[cubic-bezier(.22,1,.36,1)] group-hover:-translate-x-6 group-hover:-translate-y-6 group-hover:rotate-45" />
       <div className="absolute -bottom-4 -right-4 h-32 w-32 rounded-full border border-white/30" />
-      <span className="absolute left-5 top-4 font-mono text-xs uppercase tracking-[0.25em] text-white/80">
+      <span className="absolute left-5 right-5 top-4 truncate font-mono text-[10px] uppercase tracking-[0.16em] text-white/80 sm:text-xs sm:tracking-[0.25em]">
         {project.kicker}
       </span>
       <span className="absolute bottom-2 left-5 text-[clamp(4rem,9vw,7rem)] font-semibold leading-none tracking-tighter text-white/90 mix-blend-overlay">
@@ -120,7 +120,7 @@ export default function Work() {
   );
 
   return (
-    <section id="work" ref={root} className="relative overflow-hidden py-24 md:flex md:h-[100svh] md:flex-col md:justify-center md:py-0">
+    <section id="work" ref={root} className="relative overflow-hidden py-20 md:flex md:h-[100svh] md:flex-col md:justify-center md:py-0">
       <div aria-hidden className="orb orb-violet orb-soft right-[-25%] top-[5%] h-[70vmax] w-[70vmax]" />
 
       <div className="mx-auto mb-12 flex w-full max-w-6xl items-end justify-between gap-6 px-5 sm:px-8 md:mb-10">
