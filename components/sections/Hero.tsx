@@ -1,92 +1,197 @@
 "use client";
 
-import Image from "next/image";
-import clsx from "clsx";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { gsap, useGSAP } from "@/lib/gsap";
 import { profile, stats } from "@/lib/data";
-import { container } from "../Section";
+import SplitText from "../SplitText";
+import Magnetic from "../Magnetic";
 import { scrollToTarget } from "../SmoothScroll";
 
-export default function Hero() {
+/** Stagger index for the CSS entrance animation. */
+const at = (i: number) => ({ "--i": i }) as CSSProperties;
+
+function RoleTicker() {
+  const [i, setI] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setI((n) => (n + 1) % profile.roles.length), 2600);
+    return () => clearInterval(id);
+  }, []);
   return (
-    <section id="top" className={clsx(container, "pb-16 pt-10 md:pb-24 md:pt-20")}>
-      <div className="grid gap-10 md:grid-cols-12 md:gap-x-8">
-        <div className="md:col-span-7 lg:col-span-8">
-          <div data-hero className="flex items-center gap-4">
-            {/* Phones get a small portrait here instead of a full-height photo above the fold. */}
-            <Image
-              src={profile.photo}
-              alt=""
-              width={56}
-              height={56}
-              priority
-              className="h-14 w-14 rounded-md object-cover object-[50%_25%] md:hidden"
-            />
-            <p className="text-sm text-muted">
-              <span className="font-medium text-fg">{profile.name}</span>
-              <span className="block sm:inline">
-                <span className="hidden sm:inline"> · </span>
-                {profile.role}, {profile.location}
-              </span>
-            </p>
-          </div>
+    <span className="relative block h-[1.6em] w-full overflow-hidden">
+      <AnimatePresence mode="popLayout" initial={false}>
+        <motion.span
+          key={i}
+          initial={{ y: "100%", opacity: 0 }}
+          animate={{ y: "0%", opacity: 1 }}
+          exit={{ y: "-100%", opacity: 0 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className="absolute left-0 whitespace-nowrap text-fg"
+        >
+          {profile.roles[i]}
+        </motion.span>
+      </AnimatePresence>
+    </span>
+  );
+}
 
-          <h1 data-hero className="mt-8 max-w-[16ch] text-balance font-serif text-[clamp(2.6rem,6.4vw,5.25rem)] font-normal leading-[1.02] tracking-[-0.015em] md:mt-12">
-            Crafting fast, elegant interfaces that scale.
-          </h1>
+export default function Hero() {
+  const root = useRef<HTMLElement>(null);
+  const content = useRef<HTMLDivElement>(null);
 
-          <p data-hero className="mt-6 max-w-xl text-[17px] leading-relaxed text-muted md:mt-8">
-            6+ years shipping <span className="text-fg">production-grade products</span> for{" "}
-            <span className="text-fg">large enterprises and high-scale platforms</span> — from React and Next.js front
-            ends to Node.js APIs and databases.
-          </p>
+  useGSAP(
+    () => {
+      // The headline/blocks entrance is pure CSS (globals.css) so it starts at
+      // first paint. JS only adds desktop enhancements on top.
+      const desktop = window.matchMedia("(pointer: fine) and (min-width: 768px)").matches;
+      const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!desktop || reduced) return;
 
-          <div data-hero className="mt-8 flex flex-wrap gap-3">
-            <button type="button" onClick={() => scrollToTarget("#work")} className="btn btn-primary">
-              See selected work <span aria-hidden>→</span>
-            </button>
-            <button type="button" onClick={() => scrollToTarget("#contact")} className="btn btn-secondary">
-              Let&apos;s talk
-            </button>
-          </div>
-        </div>
+      // Count the stats up, but only if we hydrated while the intro screen still
+      // covers them — otherwise visitors would see the numbers jump back to 0.
+      if (performance.now() < 1000) {
+        gsap.utils.toArray<HTMLElement>(".stat-num").forEach((el) => {
+          const target = Number(el.dataset.value);
+          const obj = { v: 0 };
+          gsap.to(obj, {
+            v: target,
+            duration: 2,
+            delay: 1.6,
+            ease: "power3.out",
+            onUpdate: () => {
+              el.textContent = Math.round(obj.v).toLocaleString("en-US");
+            },
+          });
+        });
+      }
 
-        <figure data-hero className="hidden md:col-span-5 md:block lg:col-span-4">
-          <div className="relative aspect-[3/4] overflow-hidden rounded-lg bg-surface">
-            <Image
-              src={profile.photo}
-              alt={`Portrait of ${profile.name}`}
-              fill
-              priority
-              sizes="(min-width: 1024px) 360px, 40vw"
-              className="object-cover object-[50%_30%]"
-            />
-          </div>
-          <figcaption className="mt-3 text-xs text-subtle">
-            Originally from {profile.hometown}. Based in {profile.location.split(",")[0]}.
-          </figcaption>
-        </figure>
+      // Scrubbed exit: the hero recedes as the next section arrives.
+      gsap.to(content.current, {
+        yPercent: -12,
+        scale: 0.94,
+        opacity: 0.15,
+        ease: "none",
+        scrollTrigger: { trigger: root.current, start: "top top", end: "bottom top", scrub: true },
+      });
+
+      // Pointer spotlight.
+      const el = root.current!;
+      const setX = gsap.quickTo(el, "--mx", { duration: 0.6, ease: "power3" });
+      const setY = gsap.quickTo(el, "--my", { duration: 0.6, ease: "power3" });
+      const move = (e: PointerEvent) => {
+        const r = el.getBoundingClientRect();
+        setX(((e.clientX - r.left) / r.width) * 100);
+        setY(((e.clientY - r.top) / r.height) * 100);
+      };
+      el.addEventListener("pointermove", move);
+      return () => el.removeEventListener("pointermove", move);
+    },
+    { scope: root }
+  );
+
+  return (
+    <section
+      id="top"
+      ref={root}
+      className="relative flex min-h-[100svh] items-end overflow-hidden px-5 pb-10 pt-32 sm:px-8 [--mx:50] [--my:40]"
+    >
+      {/* Aurora */}
+      <div aria-hidden className="pointer-events-none absolute inset-0">
+        <div className="orb orb-violet orb-float-a -left-[25%] -top-[30%] h-[90vmax] w-[90vmax]" />
+        <div className="orb orb-pink orb-float-b -right-[30%] -top-[10%] h-[80vmax] w-[80vmax]" />
+        <div className="orb orb-amber orb-float-c -bottom-[45%] left-[10%] h-[75vmax] w-[75vmax]" />
+        <div
+          className="absolute inset-0 hidden opacity-70 md:block"
+          style={{
+            background:
+              "radial-gradient(600px circle at calc(var(--mx) * 1%) calc(var(--my) * 1%), var(--spot), transparent 45%)",
+          }}
+        />
+        <div className="bg-grid absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-ink" />
       </div>
 
-      <dl className="mt-14 grid grid-cols-2 border-t border-line md:mt-20 md:grid-cols-4">
-        {stats.map((s, i) => (
-          <div
-            key={s.label}
-            data-hero
-            className={clsx(
-              "flex flex-col gap-1 py-5 pr-4 md:py-6",
-              i % 2 === 1 && "border-l border-line pl-4 md:pl-6",
-              i >= 2 && "border-t border-line md:border-t-0",
-              i === 2 && "md:border-l md:pl-6"
-            )}
-          >
-            <dt className="order-2 text-sm leading-snug text-muted">{s.label}</dt>
-            <dd className="font-serif text-4xl leading-none tabular-nums">
-              <span data-count={s.value}>{s.value.toLocaleString("en-US")}</span>
-              <span className="text-accent">{s.suffix}</span>
-            </dd>
+      <div ref={content} className="relative mx-auto w-full max-w-6xl">
+        <p className="hero-fade mb-4 font-mono text-sm text-muted" style={at(0)}>
+          Hi, I&apos;m {profile.name} —
+        </p>
+
+        <h1 className="text-[clamp(2.9rem,9.2vw,8.6rem)] font-medium leading-[0.92] tracking-[-0.045em]">
+          <SplitText text="Crafting fast," className="block" />
+          <span className="block">
+            <span className="inline-block overflow-hidden pb-[0.12em] pr-[0.08em] align-bottom">
+              <span
+                className="split-char inline-block font-serif font-normal italic tracking-[-0.02em] text-gradient"
+                style={at(14)}
+              >
+                elegant
+              </span>
+            </span>{" "}
+            <SplitText text="interfaces" offset={16} />
+          </span>
+          <SplitText text="that scale." className="block text-fg/40" offset={27} />
+        </h1>
+
+        <div className="mt-10 grid gap-10 md:grid-cols-[1.2fr_1fr] md:items-end">
+          <div>
+            <p className="hero-fade max-w-xl text-lg leading-relaxed text-muted" style={at(1)}>
+              <RoleTicker />
+              6+ years shipping <span className="text-fg">production-grade products</span> for{" "}
+              <span className="text-fg">large enterprises and high-scale platforms</span> — from React and Next.js
+              front ends to Node.js APIs and databases.
+            </p>
+            <div className="hero-fade mt-8 flex flex-wrap items-center gap-3" style={at(2)}>
+              <Magnetic>
+                <button
+                  type="button"
+                  onClick={() => scrollToTarget("#work")}
+                  className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-accent p-px"
+                >
+                  <span className="inline-flex items-center gap-3 rounded-full bg-ink px-6 py-3.5 text-sm font-medium transition-colors duration-500 group-hover:bg-transparent group-hover:text-ink">
+                    See selected work
+                    <span className="transition-transform duration-500 group-hover:translate-x-1">→</span>
+                  </span>
+                </button>
+              </Magnetic>
+              <Magnetic>
+                <button
+                  type="button"
+                  onClick={() => scrollToTarget("#contact")}
+                  className="rounded-full border border-fg/15 px-6 py-3.5 text-sm text-fg/80 transition-colors hover:border-fg/40 hover:text-fg"
+                >
+                  Let&apos;s talk
+                </button>
+              </Magnetic>
+            </div>
           </div>
-        ))}
-      </dl>
+
+          <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-fg/10 bg-fg/10">
+            {stats.map((s, i) => (
+              <div key={s.label} className="hero-fade flex flex-col bg-ink/90 p-5" style={at(3 + i)}>
+                <dt className="order-2 mt-1 text-xs leading-snug text-muted">{s.label}</dt>
+                <dd className="text-3xl font-medium tracking-tight">
+                  <span className="stat-num tabular-nums" data-value={s.value}>
+                    {s.value.toLocaleString("en-US")}
+                  </span>
+                  <span className="text-gradient">{s.suffix}</span>
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+
+        <button
+          type="button"
+          onClick={() => scrollToTarget("#about")}
+          className="hero-fade mt-12 hidden items-center gap-3 font-mono text-xs uppercase tracking-[0.25em] text-muted md:inline-flex"
+          style={at(7)}
+        >
+          <span className="relative h-10 w-6 rounded-full border border-fg/20">
+            <span className="absolute left-1/2 top-2 h-2 w-0.5 -translate-x-1/2 animate-bounce rounded bg-fg/70" />
+          </span>
+          Scroll to explore
+        </button>
+      </div>
     </section>
   );
 }

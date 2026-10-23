@@ -212,28 +212,39 @@ export const projects: Project[] = [
 export const skillGroups = [
   {
     title: "Frontend",
+    icon: "◆",
     items: ["React.js", "Next.js", "React Native", "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3 / SCSS", "Tailwind CSS", "Material UI", "Chakra UI", "Ant Design", "Bootstrap"],
   },
   {
     title: "Backend & Databases",
+    icon: "◇",
     items: ["Node.js", "Express.js", "REST APIs", "GraphQL", "PostgreSQL", "Neon", "MongoDB", "MySQL", "Prisma ORM", "AWS DynamoDB"],
   },
   {
     title: "State & Architecture",
+    icon: "❖",
     items: ["Redux Toolkit", "Zustand", "Context API", "Axios interceptors", "SPA / SSR", "Component design systems", "Sitecore SXA", "CMS-driven UI"],
   },
   {
     title: "Performance & Quality",
+    icon: "✦",
     items: ["Code-splitting", "Lazy loading", "Debouncing / throttling", "Core Web Vitals", "Web Accessibility", "Jest", "React Testing Library", "SonarQube"],
   },
   {
     title: "DevOps & Tools",
+    icon: "⬡",
     items: ["Git (GitHub / Bitbucket)", "Jenkins CI/CD", "AWS (Amplify, S3, EC2)", "Netlify", "Cloudinary", "Twilio", "JIRA", "Postman", "Figma", "Zeplin"],
   },
   {
     title: "AI-Assisted Development",
+    icon: "✧",
     items: ["Claude Code", "GitHub Copilot", "Cursor", "ChatGPT", "Gemini", "Prompt engineering"],
   },
+];
+
+export const marquee = [
+  "React.js", "Next.js", "TypeScript", "Node.js", "Express", "PostgreSQL", "MongoDB", "Prisma",
+  "Zustand", "Redux Toolkit", "Tailwind CSS", "Sitecore SXA", "GraphQL", "AWS", "Claude Code",
 ];
 
 export const process = [

@@ -1,20 +1,70 @@
+"use client";
+
+import { useRef } from "react";
+import { gsap, useGSAP } from "@/lib/gsap";
 import { process } from "@/lib/data";
-import Section from "../Section";
+import SectionHeading from "../SectionHeading";
+
+const accents = [
+  "orb-violet",
+  "orb-pink",
+  "orb-amber",
+];
 
 export default function Process() {
+  const root = useRef<HTMLElement>(null);
+
+  useGSAP(
+    () => {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      const cards = gsap.utils.toArray<HTMLElement>(".process-card");
+      cards.forEach((card, i) => {
+        const next = cards[i + 1];
+        if (!next) return;
+        // Recede each card as the next one slides over it.
+        gsap.to(card.querySelector(".process-inner"), {
+          scale: 0.9,
+          opacity: 0.35,
+          ease: "none",
+          scrollTrigger: { trigger: next, start: "top bottom", end: "top 20%", scrub: true },
+        });
+      });
+    },
+    { scope: root }
+  );
+
   return (
-    <Section index="05" label="How I work" title="A calm process for complex products." className="bg-surface">
-      <ol className="grid gap-10 md:grid-cols-3 md:gap-8">
-        {process.map((p) => (
-          <li key={p.step} data-reveal className="relative pt-5">
-            <span aria-hidden data-draw className="absolute inset-x-0 top-0 h-px origin-left bg-fg" />
-            <p className="font-mono text-sm tabular-nums text-accent">{p.step}</p>
-            <h3 className="mt-3 text-2xl font-medium tracking-tight">{p.title}</h3>
-            <p className="mt-3 leading-relaxed text-muted">{p.body}</p>
-            <p className="mt-4 text-sm text-subtle">{p.tags.join(" · ")}</p>
-          </li>
-        ))}
-      </ol>
-    </Section>
+    <section ref={root} className="relative px-5 py-20 sm:px-8 md:py-40">
+      <div className="mx-auto max-w-6xl">
+        <SectionHeading index="05" eyebrow="How I work" title="A calm process" accent="for complex products." />
+
+        <div className="mt-16 space-y-6">
+          {process.map((p, i) => (
+            <div key={p.step} className="process-card sticky" style={{ top: `calc(6rem + ${i * 1.75}rem)` }}>
+              <div className="process-inner gradient-border relative origin-top overflow-hidden rounded-[32px] bg-ink-2 p-8 sm:p-12">
+                <div
+                  aria-hidden
+                  className={`orb ${accents[i]} -right-32 -top-32 h-[28rem] w-[28rem]`}
+                />
+                <div className="relative grid gap-8 md:grid-cols-[auto_1fr_1fr] md:items-center md:gap-14">
+                  <span className="text-gradient font-serif text-7xl italic leading-none sm:text-8xl">{p.step}</span>
+                  <h3 className="text-4xl font-medium tracking-tight sm:text-5xl">{p.title}</h3>
+                  <div>
+                    <p className="text-lg leading-relaxed text-fg/75">{p.body}</p>
+                    <div className="mt-6 flex flex-wrap gap-2">
+                      {p.tags.map((t) => (
+                        <span key={t} className="rounded-full border border-fg/10 px-3 py-1 text-xs text-muted">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

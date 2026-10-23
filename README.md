@@ -2,14 +2,15 @@
 
 Personal portfolio of **Badal Sherpa**, Lead Software Engineer (React.js · Next.js · TypeScript · Node.js).
 
-[![Portfolio Website](https://img.shields.io/badge/Portfolio-badalsherpa.github.io-1e5e47)](https://badalsherpa.github.io/)
+[![Portfolio Website](https://img.shields.io/badge/Portfolio-badalsherpa.github.io-f07a4c)](https://badalsherpa.github.io/)
 
 ## Stack
 
 - **Next.js 16** (App Router, static export) + **TypeScript**
 - **Tailwind CSS v4** for styling
-- Design tokens (colour, radius, buttons, labels) live in [`app/globals.css`](app/globals.css); light and dark themes follow the system setting
-- No animation libraries — interactions are short CSS transitions and respect `prefers-reduced-motion`
+- **GSAP + ScrollTrigger** for scroll-driven animation (pinned horizontal work reel, scrubbed text, stacking cards)
+- **Framer Motion** for UI micro-interactions (draggable/flippable dev pass, accordion, tilt cards, menu)
+- **Lenis** for smooth scrolling
 
 ## Editing content
 
