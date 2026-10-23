@@ -13,9 +13,7 @@
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "clsx": "^2.1.1",
-    "framer-motion": "^14.4.0",
     "gsap": "^3.15.0",
-    "lenis": "^1.3.27",
     "next": "16.4.2",
     "react": "19.3.0",
     "react-dom": "19.3.0"
@@ -31,7 +29,7 @@
     "tailwindcss": "^4",
     "typescript": "^5"
   },
-  "description": "Personal portfolio of Badal Sherpa — Next.js, TypeScript, GSAP, Framer Motion",
+  "description": "Personal portfolio of Badal Sherpa — Next.js, TypeScript, Tailwind CSS",
   "author": "Badal Sherpa",
   "homepage": "https://badalsherpa.github.io"
 }

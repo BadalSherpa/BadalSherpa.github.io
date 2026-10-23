@@ -132,7 +132,6 @@ export type Project = {
   href?: string;
   linkLabel?: string;
   year: string;
-  gradient: string;
 };
 
 export const projects: Project[] = [
@@ -145,7 +144,6 @@ export const projects: Project[] = [
     href: "https://yatriadventure.in",
     linkLabel: "yatriadventure.in",
     year: "2026",
-    gradient: "from-[#ff9f43] via-[#ff6b4a] to-[#e11d74]",
   },
   {
     title: "Western Growers",
@@ -156,7 +154,6 @@ export const projects: Project[] = [
     href: "https://www.wghealthspecialty.com",
     linkLabel: "wghealthspecialty.com",
     year: "2022 — 26",
-    gradient: "from-[#7c5cff] via-[#b14dff] to-[#ff4fd8]",
   },
   {
     title: "HUB Signature App",
@@ -165,7 +162,6 @@ export const projects: Project[] = [
       "Spearheaded the end-to-end migration of HUB's legacy Angular signature web app to React, significantly improving performance and maintainability.",
     tags: ["React", "TypeScript", "Migration"],
     year: "2022 — 26",
-    gradient: "from-[#ff4fd8] via-[#ff6b8b] to-[#ff9f43]",
   },
   {
     title: "hubinternational.com",
@@ -176,7 +172,6 @@ export const projects: Project[] = [
     href: "https://www.hubinternational.com",
     linkLabel: "hubinternational.com",
     year: "2022 — 26",
-    gradient: "from-[#22d3ee] via-[#6d7cff] to-[#7c5cff]",
   },
   {
     title: "Paytm Onboarding Engine",
@@ -185,7 +180,6 @@ export const projects: Project[] = [
       "Multi-vertical dashboard configuring onboarding workflows for Insurance, Finance, Learning and E-Commerce — used by 3,000+ KAM and QC agents.",
     tags: ["React", "Axios", "REST", "Jest", "Jenkins"],
     year: "2021 — 22",
-    gradient: "from-[#00baf2] via-[#2f6bff] to-[#1b2a7a]",
   },
   {
     title: "Fleet Logistics Suite",
@@ -194,7 +188,6 @@ export const projects: Project[] = [
       "Web dashboard plus a React Native driver app tracking delivery fleets for Flipkart, Amazon and Coca-Cola with live Google Maps telemetry and a JSON-driven form builder.",
     tags: ["React Native", "Redux", "Google Maps", "Chakra UI"],
     year: "2020 — 21",
-    gradient: "from-[#34d399] via-[#14b8a6] to-[#0e7490]",
   },
   {
     title: "Tattoo Studio CRM",
@@ -203,7 +196,6 @@ export const projects: Project[] = [
       "Appointment calendars, client tracking and real-time revenue analytics dashboards, with third-party calendar booking flows.",
     tags: ["React", "TypeScript", "Ant Design"],
     year: "2020",
-    gradient: "from-[#f472b6] via-[#c026d3] to-[#581c87]",
   },
   {
     title: "Inmedic",
@@ -214,46 +206,34 @@ export const projects: Project[] = [
     href: "https://inmedic.co.kr",
     linkLabel: "inmedic.co.kr",
     year: "2021 — 22",
-    gradient: "from-[#a78bfa] via-[#818cf8] to-[#38bdf8]",
   },
 ];
 
 export const skillGroups = [
   {
     title: "Frontend",
-    icon: "◆",
     items: ["React.js", "Next.js", "React Native", "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3 / SCSS", "Tailwind CSS", "Material UI", "Chakra UI", "Ant Design", "Bootstrap"],
   },
   {
     title: "Backend & Databases",
-    icon: "◇",
     items: ["Node.js", "Express.js", "REST APIs", "GraphQL", "PostgreSQL", "Neon", "MongoDB", "MySQL", "Prisma ORM", "AWS DynamoDB"],
   },
   {
     title: "State & Architecture",
-    icon: "❖",
     items: ["Redux Toolkit", "Zustand", "Context API", "Axios interceptors", "SPA / SSR", "Component design systems", "Sitecore SXA", "CMS-driven UI"],
   },
   {
     title: "Performance & Quality",
-    icon: "✦",
     items: ["Code-splitting", "Lazy loading", "Debouncing / throttling", "Core Web Vitals", "Web Accessibility", "Jest", "React Testing Library", "SonarQube"],
   },
   {
     title: "DevOps & Tools",
-    icon: "⬡",
     items: ["Git (GitHub / Bitbucket)", "Jenkins CI/CD", "AWS (Amplify, S3, EC2)", "Netlify", "Cloudinary", "Twilio", "JIRA", "Postman", "Figma", "Zeplin"],
   },
   {
     title: "AI-Assisted Development",
-    icon: "✧",
     items: ["Claude Code", "GitHub Copilot", "Cursor", "ChatGPT", "Gemini", "Prompt engineering"],
   },
-];
-
-export const marquee = [
-  "React.js", "Next.js", "TypeScript", "Node.js", "Express", "PostgreSQL", "MongoDB", "Prisma",
-  "Zustand", "Redux Toolkit", "Tailwind CSS", "Sitecore SXA", "GraphQL", "AWS", "Claude Code",
 ];
 
 export const process = [

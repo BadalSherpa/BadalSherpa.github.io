@@ -1,29 +1,28 @@
-import SmoothScroll from "@/components/SmoothScroll";
-import Cursor from "@/components/Cursor";
-import Preloader from "@/components/Preloader";
+import Motion from "@/components/Motion";
 import Nav from "@/components/Nav";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
-import Marquee from "@/components/sections/Marquee";
 import Work from "@/components/sections/Work";
 import Experience from "@/components/sections/Experience";
 import Skills from "@/components/sections/Skills";
 import Process from "@/components/sections/Process";
 import Credentials from "@/components/sections/Credentials";
-import Contact from "@/components/sections/Contact";
+import Contact, { Footer } from "@/components/sections/Contact";
 
 export default function Home() {
   return (
     <>
-      <SmoothScroll />
-      <Preloader />
-      <Cursor />
-      <div aria-hidden className="grain" />
+      <a
+        href="#main"
+        className="btn btn-primary fixed left-4 top-3 z-[60] -translate-y-20 focus-visible:translate-y-0"
+      >
+        Skip to content
+      </a>
+      <Motion />
       <Nav />
-      <main>
+      <main id="main">
         <Hero />
         <About />
-        <Marquee />
         <Work />
         <Experience />
         <Skills />
@@ -31,6 +30,7 @@ export default function Home() {
         <Credentials />
         <Contact />
       </main>
+      <Footer />
     </>
   );
 }
