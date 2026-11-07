@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://badalsherpa.github.io"),
   title: "Badal Sherpa — Lead Software Engineer",
   description:
-    "Badal Sherpa is a Lead Software Engineer in Gurugram building fast, accessible, scalable products with React.js, Next.js, TypeScript and Node.js.",
+    "Badal Sherpa is a frontend-focused Lead Software Engineer in Gurugram building fast, accessible, scalable products with React.js, Next.js, TypeScript and Node.js.",
   keywords: ["Badal Sherpa", "Lead Software Engineer", "React", "Next.js", "TypeScript", "Frontend", "Portfolio"],
   authors: [{ name: "Badal Sherpa" }],
   openGraph: {

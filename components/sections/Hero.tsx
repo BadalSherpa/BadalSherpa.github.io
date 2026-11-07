@@ -137,8 +137,8 @@ export default function Hero() {
             <p className="hero-fade max-w-xl text-lg leading-relaxed text-muted" style={at(1)}>
               <RoleTicker />
               6+ years shipping <span className="text-fg">production-grade products</span> for{" "}
-              <span className="text-fg">large enterprises and high-scale platforms</span> — from React and Next.js
-              front ends to Node.js APIs and databases.
+              <span className="text-fg">enterprise insurance and fintech</span> — fast, accessible React and Next.js
+              front ends, backed by Node.js and GraphQL APIs.
             </p>
             <div className="hero-fade mt-8 flex flex-wrap items-center gap-3" style={at(2)}>
               <Magnetic>

@@ -6,20 +6,20 @@ export const profile = {
   firstName: "Badal",
   lastName: "Sherpa",
   role: "Lead Software Engineer",
-  tagline: "React.js · Next.js · TypeScript · Node.js · Express",
+  tagline: "Frontend · React.js · Next.js · TypeScript · Node.js",
   location: "Gurugram, India",
   hometown: "Sukhia Pokhri, Darjeeling",
   email: "badalsherpa7@gmail.com",
   resume: "/Badal_Sherpa_Resume.pdf",
   photo: "/images/badal-sherpa-2026.jpg",
   summary:
-    "Lead Software Engineer with 6+ years of experience designing and building scalable web and mobile applications end to end — responsive front ends with React, Next.js and TypeScript, and backend services with Node.js and Express, including REST API design, data modeling and integrations backed by PostgreSQL and MongoDB.",
+    "Frontend-focused Lead Software Engineer with 6+ years building React and Next.js products for enterprise insurance (HUB International) and fintech (Paytm) — strong in TypeScript, SSR, component libraries, Core Web Vitals, accessibility and testing, and comfortable with Node.js/Express and GraphQL APIs.",
   about:
-    "I build products end to end — from UI to API to database. I've delivered enterprise products, led an Angular-to-React migration, and was promoted from Senior to Lead for technical leadership, code-review quality and mentoring. I use AI-assisted tools like Claude Code, Copilot and Cursor to ship faster without compromising quality.",
+    "I lead frontend delivery for enterprise products. I led the migration of a legacy Angular app to React, built Next.js / Sitecore SXA experiences used by 2,000+ clients across Canada, and was promoted from Senior to Lead in Jan 2026, leading a team of 3 engineers through code reviews, sprint planning and delivery. I use AI-assisted tools like Claude Code, Copilot and Cursor to ship faster without compromising quality.",
   roles: [
     "Lead Software Engineer",
     "React & Next.js Specialist",
-    "Full-stack with Node & Express",
+    "Frontend Architecture & SSR",
     "Performance Optimizer",
     "Mentor & Code Reviewer",
   ],
@@ -28,7 +28,7 @@ export const profile = {
 export const stats = [
   { value: 6, suffix: "+", label: "Years building for the web" },
   { value: 3000, suffix: "+", label: "Agents onboarded on Paytm flows" },
-  { value: 1000, suffix: "+", label: "HUB clients using my Sitecore components" },
+  { value: 2000, suffix: "+", label: "HUB clients using my Sitecore components" },
   { value: 396, suffix: "K", label: "Developers reached on Stack Overflow" },
 ];
 
@@ -68,16 +68,14 @@ export const experience: Experience[] = [
         client: "HUB International",
         product: "Enterprise web ecosystem",
         points: [
-          "Led frontend development and maintenance for hubinternational.com and major subsidiary portals.",
-          "Spearheaded the end-to-end migration of HUB's legacy Angular signature web app to React, significantly improving performance and maintainability.",
-          "Built and shipped the complete live frontend for Western Growers, converting complex UI designs into scalable Sitecore SXA components.",
-          "Developed Sitecore SXA components used by thousands of HUB International clients across Canada.",
-          "Built high-performance enterprise UIs, working with backend teams on API contracts and data flow for reliable data hydration and fast page loads for a high-traffic international user base.",
-          "Drove sprint goals and UI/UX consistency, partnering with QA and backend engineers to resolve complex cross-browser defects.",
-          "Promoted from Senior to Lead Engineer; upskilled junior developers through rigorous code reviews and by unblocking technical roadblocks.",
-          "Integrated AI coding tools (Claude Code, GitHub Copilot, Cursor, ChatGPT) into daily workflows to accelerate UI component delivery.",
-          "Built reusable, well-tested UI components with consistent handling of API loading, error and validation states across modules.",
-          "Improved page speed through code-splitting, lazy loading and fewer redundant API calls; wrote unit tests with Jest and React Testing Library to keep releases stable.",
+          "Led frontend delivery for hubinternational.com and 3 subsidiary portals serving 10K+ monthly visitors; owned sprint goals for a team of 3 engineers alongside QA and backend developers.",
+          "Led the migration of HUB's legacy Angular signature web app to React, cutting page load time by 80% and reducing build time.",
+          "Built the complete live frontend for Western Growers, turning complex designs into 10 reusable Sitecore SXA + React components.",
+          "Raised Lighthouse performance scores from 79 to 95+ through code-splitting, lazy loading and removing redundant API calls.",
+          "Built a reusable component set with consistent loading, error and validation states, reused across 5 modules with 80%+ Jest + React Testing Library coverage.",
+          "Mentored 3 junior developers through code reviews and pairing; defined API contracts with backend teams for reliable data hydration.",
+          "Introduced AI coding tools (Copilot, Cursor, Claude Code) into the team workflow to speed up component delivery and reduce boilerplate.",
+          "Owned features end to end, from development and testing through deployment and post-release support.",
         ],
       },
     ],
@@ -85,20 +83,20 @@ export const experience: Experience[] = [
   },
   {
     company: "Techlious Network",
-    role: "Software Engineer (Frontend)",
+    role: "Software Engineer · Frontend",
+    progression: "Remote, alongside B.Tech",
     period: "Jan 2020 — Jun 2022",
-    location: "India",
+    location: "Remote",
     engagements: [
       {
         client: "Paytm",
         product: "Onboarding Engine Platform",
         period: "Sep 2021 – Jun 2022",
         points: [
-          "Core contributor to a dynamic, multi-vertical dashboard for configuring workflows across Insurance, Finance, Learning and E-Commerce.",
-          "Delivered the B2B and agent onboarding experience used by 3,000+ Key Asset Managers (KAM) and Quality Control (QC) agents.",
-          "Built and tested REST APIs with Postman and integrated them across backend and frontend, including request validation and business logic.",
-          "Integrated secure REST APIs via Axios with centralized error handling and clear loading states; passed SonarQube quality gates before Jenkins CI/CD deployments.",
-          "Optimized JavaScript execution and debounced search inputs; led technical discussions, peer code reviews and end-to-end feature delivery.",
+          "Core contributor to the Onboarding Engine, a multi-vertical dashboard (Insurance, Finance, Learning, E-commerce) for configuring onboarding workflows.",
+          "Delivered B2B and agent onboarding flows used by 3,000+ Key Asset Managers and Quality Control agents.",
+          "Centralised API error handling and loading states; integrated secure REST APIs via Axios and passed SonarQube gates before Jenkins CI/CD deployments.",
+          "Led technical discussions and peer code reviews; owned end-to-end feature delivery.",
         ],
       },
       {
@@ -106,17 +104,15 @@ export const experience: Experience[] = [
         product: "Logistics Platform",
         period: "Dec 2020 – Aug 2021",
         points: [
-          "Architected a logistics web dashboard from scratch and a companion React Native driver app tracking delivery fleets for Flipkart, Amazon and Coca-Cola.",
-          "Integrated Google Maps APIs for live telemetry tracking in the mobile app.",
-          "Built a dynamic JSON-driven Form Builder that lets enterprise clients generate customized inspection reports; Redux for state, Chakra UI for styling.",
+          "Built a logistics web dashboard and a React Native driver app tracking delivery fleets for clients including Flipkart, Amazon and Coca-Cola, with Google Maps live tracking.",
+          "Built a JSON-driven form builder letting enterprise clients generate custom inspection reports (Redux, Chakra UI).",
         ],
       },
       {
         client: "Internal Product",
         product: "Tattoo Management CRM",
         points: [
-          "Built a CRM with staff appointment calendars, client tracking and real-time revenue analytics dashboards using React.js, TypeScript and Ant Design.",
-          "Integrated third-party calendar libraries for booking flows and backend APIs for live dashboard data.",
+          "Built a CRM with booking calendars, client tracking and live revenue dashboards using React.js, TypeScript and Ant Design.",
         ],
       },
     ],
@@ -137,9 +133,9 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "Yatri Adventure",
-    kicker: "Personal project · Travel platform",
+    kicker: "Freelance client project · Sole developer",
     description:
-      "A travel-agency platform built from scratch — Prisma schema on Neon serverless Postgres, slug-based package pages, separate public and admin route groups, REST endpoints and an admin dashboard.",
+      "A travel-agency platform delivered single-handedly for the client, from requirements to deployment — Prisma/PostgreSQL schema for dynamic travel packages, SEO-friendly slug pages, REST endpoints and an admin dashboard.",
     tags: ["Next.js App Router", "TypeScript", "Neon Postgres", "Prisma", "Tailwind"],
     href: "https://yatriadventure.in",
     linkLabel: "yatriadventure.in",
@@ -149,7 +145,7 @@ export const projects: Project[] = [
     title: "Western Growers",
     kicker: "HUB International · Virtusa",
     description:
-      "Built and shipped the complete live frontend — complex UI designs converted into scalable Sitecore SXA components.",
+      "Built the complete live frontend, turning complex designs into 10 reusable Sitecore SXA + React components.",
     tags: ["Sitecore SXA", "React", "Performance", "a11y"],
     href: "https://www.wghealthspecialty.com",
     linkLabel: "wghealthspecialty.com",
@@ -159,7 +155,7 @@ export const projects: Project[] = [
     title: "HUB Signature App",
     kicker: "Angular → React migration",
     description:
-      "Spearheaded the end-to-end migration of HUB's legacy Angular signature web app to React, significantly improving performance and maintainability.",
+      "Led the migration of HUB's legacy Angular signature web app to React, cutting page load time by 80% and reducing build time.",
     tags: ["React", "TypeScript", "Migration"],
     year: "2022 — 26",
   },
@@ -167,7 +163,7 @@ export const projects: Project[] = [
     title: "hubinternational.com",
     kicker: "Flagship + subsidiary portals",
     description:
-      "Led frontend development and maintenance for HUB's flagship site and major subsidiary portals, with Sitecore SXA components used by thousands of clients across Canada.",
+      "Led frontend delivery for HUB's flagship site and 3 subsidiary portals serving 10K+ monthly visitors — Sitecore SXA components used by 2,000+ clients across Canada, with Lighthouse scores raised from 79 to 95+.",
     tags: ["Sitecore SXA", "Core Web Vitals", "Jest", "RTL"],
     href: "https://www.hubinternational.com",
     linkLabel: "hubinternational.com",
@@ -213,32 +209,32 @@ export const skillGroups = [
   {
     title: "Frontend",
     icon: "◆",
-    items: ["React.js", "Next.js", "React Native", "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3 / SCSS", "Tailwind CSS", "Material UI", "Chakra UI", "Ant Design", "Bootstrap"],
+    items: ["React.js", "Next.js (App Router)", "React Native", "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3 / SCSS", "Tailwind CSS", "Material UI", "Chakra UI", "Ant Design", "Bootstrap"],
   },
   {
-    title: "Backend & Databases",
+    title: "Backend & Data",
     icon: "◇",
-    items: ["Node.js", "Express.js", "REST APIs", "GraphQL", "PostgreSQL", "Neon", "MongoDB", "MySQL", "Prisma ORM", "AWS DynamoDB"],
+    items: ["Node.js", "Express.js", "REST APIs", "GraphQL", "PostgreSQL", "Prisma ORM", "MongoDB"],
   },
   {
     title: "State & Architecture",
     icon: "❖",
-    items: ["Redux Toolkit", "Zustand", "Context API", "Axios interceptors", "SPA / SSR", "Component design systems", "Sitecore SXA", "CMS-driven UI"],
+    items: ["Redux Toolkit", "Zustand", "Context API", "Axios interceptors", "SPA / SSR", "Component design systems", "Frontend system design", "Sitecore SXA (headless)", "CMS-driven UI"],
   },
   {
     title: "Performance & Quality",
     icon: "✦",
-    items: ["Code-splitting", "Lazy loading", "Debouncing / throttling", "Core Web Vitals", "Web Accessibility", "Jest", "React Testing Library", "SonarQube"],
+    items: ["Core Web Vitals", "Code-splitting", "Lazy loading", "Debouncing / throttling", "WCAG accessibility", "Jest", "React Testing Library", "SonarQube"],
   },
   {
     title: "DevOps & Tools",
     icon: "⬡",
-    items: ["Git (GitHub / Bitbucket)", "Jenkins CI/CD", "AWS (Amplify, S3, EC2)", "Netlify", "Cloudinary", "Twilio", "JIRA", "Postman", "Figma", "Zeplin"],
+    items: ["Git (GitHub / Bitbucket)", "Jenkins CI/CD", "AWS S3 / Amplify", "JIRA", "Postman", "Figma"],
   },
   {
     title: "AI-Assisted Development",
     icon: "✧",
-    items: ["Claude Code", "GitHub Copilot", "Cursor", "ChatGPT", "Gemini", "Prompt engineering"],
+    items: ["Claude Code", "GitHub Copilot", "Cursor", "ChatGPT"],
   },
 ];
 
