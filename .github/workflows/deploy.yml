@@ -13,6 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # full history so scripts/sync-resume.mjs can pick the newest PDF in resume/ by commit time
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22

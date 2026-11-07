@@ -15,7 +15,7 @@ Personal portfolio of **Badal Sherpa**, Lead Software Engineer (React.js · Next
 ## Editing content
 
 All content lives in [`lib/data.ts`](lib/data.ts) — profile, experience, projects, skills, certifications and links.
-Update that file and the whole site follows. Static assets (photo, certificates, resume PDF) are in [`public/`](public/).
+Update that file and the whole site follows. Static assets (photo, certificates) are in [`public/`](public/). Drop new resume PDFs in [`resume/`](resume/) — the newest one is served on the site.
 
 ## Development
 

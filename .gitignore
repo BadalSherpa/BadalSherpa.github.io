@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# generated from resume/ by scripts/sync-resume.mjs
+/public/Badal_Sherpa_Resume.pdf

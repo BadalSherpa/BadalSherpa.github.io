@@ -10,25 +10,31 @@ runs `.github/workflows/deploy.yml`, which builds `./out` and publishes it to th
 `gh-pages` branch → https://badalsherpa.github.io. Invoking this skill **is** the
 user's go-ahead to commit and push to `master` — that is how changes go live.
 
-## 1. Locate the new resume
+## 1. Find the new resume in `resume/`
 
-- Use the path the user gave or the file they attached in chat.
-- If they only said "attached" and no path is visible, look for the newest PDF in
-  `C:/Users/BADAL/Downloads` (`ls -t ~/Downloads/*.pdf | head -5`) and confirm which one
-  with the user before continuing.
-- If they gave a `.docx`, ask them to export a PDF (the site links a PDF).
-- If they gave **no file but described changes** ("add X to my resume"), the PDF can't be
-  regenerated here: update the site content only and tell them the PDF still needs updating.
-
-## 2. Replace the PDF
-
-Always overwrite the same filename so every existing link keeps working:
+Resumes live in the repo's `resume/` folder (any filename). `scripts/sync-resume.mjs`
+runs before every `npm run dev` / `npm run build` and copies the **newest** PDF there to
+`public/Badal_Sherpa_Resume.pdf` (gitignored, generated). Never edit `public/` directly.
 
 ```bash
-cp "<new resume path>" public/Badal_Sherpa_Resume.pdf
+git status --porcelain resume/     # new/changed PDFs not yet committed
+ls -t resume/*.pdf                 # newest first (local mtime)
 ```
 
-Do not rename it; `profile.resume` in `lib/data.ts` points to `/Badal_Sherpa_Resume.pdf`.
+- Normally the new file shows up as untracked/modified in `resume/`.
+- If the user attached a file in chat or gave a path elsewhere (e.g. Downloads), copy it
+  into `resume/` first, keeping its filename.
+- If nothing new is in `resume/` and nothing was attached, look for the newest PDF in
+  `C:/Users/BADAL/Downloads` and confirm with the user before using it.
+- If they gave a `.docx`, ask them to export a PDF (the site links a PDF).
+- If they gave **no file but described changes** ("add X to my resume"), update the site
+  content only and tell them the PDF still needs updating.
+
+## 2. Pick old vs new
+
+- **New** = the file the user just added in `resume/`.
+- **Old** = the PDF the site last deployed: `git show HEAD:<path>` of the newest committed
+  PDF in `resume/` (or the same file's HEAD version if they overwrote it in place).
 
 ## 3. Diff old vs new resume text
 
@@ -36,9 +42,9 @@ Extract both and compare so you only change what actually changed:
 
 ```bash
 SCRATCH="<scratchpad dir>"
-git show HEAD:public/Badal_Sherpa_Resume.pdf > "$SCRATCH/old.pdf"
+git show "HEAD:resume/<old file>.pdf" > "$SCRATCH/old.pdf"
 pdftotext -layout "$SCRATCH/old.pdf" "$SCRATCH/old.txt"
-pdftotext -layout public/Badal_Sherpa_Resume.pdf "$SCRATCH/new.txt"
+pdftotext -layout "resume/<new file>.pdf" "$SCRATCH/new.txt"
 diff "$SCRATCH/old.txt" "$SCRATCH/new.txt"
 ```
 
@@ -78,14 +84,16 @@ Rules:
 npm run build
 ```
 
-Fix any type or build errors before committing. Optionally `npm run lint`.
+Check the first line of output says `sync-resume: resume/<new file>.pdf -> ...` — that
+confirms the right PDF will ship. Fix any type or build errors before committing.
+Optionally `npm run lint`.
 (Per `AGENTS.md`, this Next.js version differs from older ones — check
 `node_modules/next/dist/docs/` before touching anything beyond content data.)
 
 ## 6. Commit and push (this deploys)
 
 ```bash
-git add public/Badal_Sherpa_Resume.pdf lib/data.ts app components
+git add resume/ lib/data.ts app components
 git commit -m "Update resume: <one-line summary of what changed>"
 git push origin master
 ```
@@ -105,7 +113,7 @@ after the workflow finishes):
 
 ```bash
 curl -sL https://badalsherpa.github.io/Badal_Sherpa_Resume.pdf -o "$SCRATCH/live.pdf"
-sha1sum "$SCRATCH/live.pdf" public/Badal_Sherpa_Resume.pdf
+sha1sum "$SCRATCH/live.pdf" "resume/<new file>.pdf"
 ```
 
 If hashes match and the workflow succeeded, tell the user it's live and list what changed
