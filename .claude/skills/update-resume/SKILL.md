@@ -1,6 +1,6 @@
 ---
 name: update-resume
-description: Replace the resume on badalsherpa.github.io with a new PDF from resume/, sync the site content (lib/data.ts and a few hardcoded strings), build, push and confirm the live site updated, then upload the same PDF to Badal's job portals (Naukri, LinkedIn, Indeed, Hirist, foundit, Instahyre, Wellfound) in Chrome. Use whenever Badal says "update my resume", adds or attaches a new resume PDF, or asks to refresh his resume on the live site or the job portals.
+description: Replace the resume on badalsherpa.github.io with a new PDF from resume/, sync the site content (lib/data.ts and a few hardcoded strings), build, push and confirm the live site updated, then upload the same PDF to Badal's job portals (Naukri, LinkedIn, Indeed, Hirist, foundit, Instahyre, Wellfound) in Chrome. Use whenever Badal says "update my resume", adds or attaches a new resume PDF, or asks to refresh the resume on the live site or the job portals.
 ---
 
 # Update resume on the live portfolio
@@ -127,15 +127,15 @@ portals in his Chrome (Claude in Chrome, `mcp__claude-in-chrome__*`; load the
 `anthropic-skills:chrome-browser` skill first). The portal list and per-portal notes are
 in [portals.md](portals.md) next to this file.
 
-**Get a go-ahead first.** Replacing the resume changes his profile on each site, so it
-needs his OK in this run. If his message already says to update the portals too, that is
+**Get a go-ahead first.** Replacing the resume changes their profile on each site, so it
+needs Badal's OK in this run. If Badal's message already says to update the portals too, that is
 the OK. Otherwise ask once, naming the portals and the file
 (e.g. "Upload Badal-Sherpa-2026-Resume.pdf to Naukri, LinkedIn, Indeed, Hirist, foundit,
 Instahyre and Wellfound?"), and wait. One yes covers that list for this run only.
 
 For each portal, in its own new tab:
 1. Open the Start URL from `portals.md`. If it shows a sign-in page, **don't sign in**:
-   mark it "needs sign-in" and move on. He signs in himself, and the next run picks it up.
+   mark it "needs sign-in" and move on. Badal signs in themselves, and the next run picks it up.
 2. Find the resume section. Use `find` / `read_page` to get the `<input type="file">` ref.
    Never click the upload button, because that opens a native file picker you can't
    control.
