@@ -123,7 +123,7 @@ and fix it.
 ## 8. Upload the new resume to job portals
 
 Every time a new resume PDF lands in `resume/`, also replace the resume on Badal's job
-portals in his Chrome (Claude in Chrome, `mcp__claude-in-chrome__*`; load the
+portals in their Chrome (Claude in Chrome, `mcp__claude-in-chrome__*`; load the
 `anthropic-skills:chrome-browser` skill first). The portal list and per-portal notes are
 in [portals.md](portals.md) next to this file.
 
