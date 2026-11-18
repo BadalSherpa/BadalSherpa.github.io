@@ -6,20 +6,20 @@ export const profile = {
   firstName: "Badal",
   lastName: "Sherpa",
   role: "Lead Software Engineer",
-  tagline: "Frontend · React.js · Next.js · TypeScript · Node.js",
+  tagline: "React.js · Next.js · TypeScript · JavaScript · Node.js",
   location: "Gurugram, India",
   hometown: "Sukhia Pokhri, Darjeeling",
   email: "badalsherpa7@gmail.com",
   resume: "/Badal_Sherpa_Resume.pdf",
   photo: "/images/badal-sherpa-2026.jpg",
   summary:
-    "Frontend-focused Lead Software Engineer with 6+ years building React and Next.js products for enterprise insurance (HUB International) and fintech (Paytm) — strong in TypeScript, SSR, component libraries, Core Web Vitals, accessibility and testing, and comfortable with Node.js/Express and GraphQL APIs.",
+    "Lead Software Engineer with 6+ years building React, Next.js and Node.js products for enterprise insurance (HUB International) and fintech (Paytm) — strong in TypeScript, Next.js rendering (SSR, SSG, ISR, React Server Components, streaming), component libraries, Core Web Vitals, SEO, accessibility and testing, with Node.js/Express BFF layers over REST and GraphQL APIs.",
   about:
-    "I lead frontend delivery for enterprise products. I led the migration of a legacy Angular app to React, built Next.js / Sitecore SXA experiences used by 2,000+ clients across Canada, and was promoted from Senior to Lead in Jan 2026, leading a team of 3 engineers through code reviews, sprint planning and delivery. I use AI-assisted tools like Claude Code, Copilot and Cursor to ship faster without compromising quality.",
+    "I lead delivery for enterprise products. I led the migration of a legacy Angular app to React, built Next.js / headless Sitecore SXA experiences used by 2,000+ clients across Canada, and was promoted from Senior to Lead in Jan 2026, leading a team of 3 engineers through code reviews, sprint planning and delivery. I use agentic AI coding tools like Claude Code, Copilot and Cursor to ship faster without compromising quality.",
   roles: [
     "Lead Software Engineer",
     "React & Next.js Specialist",
-    "Frontend Architecture & SSR",
+    "SSR · SSG · ISR · Server Components",
     "Performance Optimizer",
     "Mentor & Code Reviewer",
   ],
@@ -68,13 +68,13 @@ export const experience: Experience[] = [
         client: "HUB International",
         product: "Enterprise web ecosystem",
         points: [
-          "Led frontend delivery for hubinternational.com and 3 subsidiary portals serving 10K+ monthly visitors; owned sprint goals for a team of 3 engineers alongside QA and backend developers.",
+          "Led delivery for hubinternational.com and 3 subsidiary portals serving 10K+ monthly visitors; owned sprint goals for a team of 3 engineers alongside QA and backend developers.",
           "Led the migration of HUB's legacy Angular signature web app to React, cutting page load time by 80% and reducing build time.",
-          "Built the complete live frontend for Western Growers, turning complex designs into 10 reusable Sitecore SXA + React components.",
-          "Raised Lighthouse performance scores from 79 to 95+ through code-splitting, lazy loading and removing redundant API calls.",
+          "Built the complete live frontend for Western Growers, turning complex designs into 10 reusable headless Sitecore SXA + React components.",
+          "Raised Lighthouse performance scores from 79 to 95+ through code-splitting, lazy loading and removing redundant API calls, improving Core Web Vitals and SEO.",
           "Built a reusable component set with consistent loading, error and validation states, reused across 5 modules with 80%+ Jest + React Testing Library coverage.",
           "Mentored 3 junior developers through code reviews and pairing; defined API contracts with backend teams for reliable data hydration.",
-          "Introduced AI coding tools (Copilot, Cursor, Claude Code) into the team workflow to speed up component delivery and reduce boilerplate.",
+          "Introduced AI coding tools (Copilot, Cursor, Claude Code agentic workflows) into the team to speed up component delivery and reduce boilerplate.",
           "Owned features end to end, from development and testing through deployment and post-release support.",
         ],
       },
@@ -135,8 +135,8 @@ export const projects: Project[] = [
     title: "Yatri Adventure",
     kicker: "Freelance client project · Sole developer",
     description:
-      "A travel-agency platform delivered single-handedly for the client, from requirements to deployment — Prisma/PostgreSQL schema for dynamic travel packages, SEO-friendly slug pages, REST endpoints and an admin dashboard.",
-    tags: ["Next.js App Router", "TypeScript", "Neon Postgres", "Prisma", "Tailwind"],
+      "A travel-agency platform delivered single-handedly for the client, from requirements to deployment — Prisma/PostgreSQL schema for dynamic travel packages, SEO-friendly slug pages served with SSR, SSG and ISR via React Server Components and streaming, a REST BFF layer and an admin dashboard.",
+    tags: ["Next.js App Router", "Server Components", "TypeScript", "Neon Postgres", "Prisma", "Tailwind"],
     href: "https://yatriadventure.in",
     linkLabel: "yatriadventure.in",
     year: "2026",
@@ -145,7 +145,7 @@ export const projects: Project[] = [
     title: "Western Growers",
     kicker: "HUB International · Virtusa",
     description:
-      "Built the complete live frontend, turning complex designs into 10 reusable Sitecore SXA + React components.",
+      "Built the complete live frontend, turning complex designs into 10 reusable headless Sitecore SXA + React components.",
     tags: ["Sitecore SXA", "React", "Performance", "a11y"],
     href: "https://www.wghealthspecialty.com",
     linkLabel: "wghealthspecialty.com",
@@ -209,22 +209,22 @@ export const skillGroups = [
   {
     title: "Frontend",
     icon: "◆",
-    items: ["React.js", "Next.js (App Router)", "React Native", "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3 / SCSS", "Tailwind CSS", "Material UI", "Chakra UI", "Ant Design", "Bootstrap"],
+    items: ["React.js", "Next.js (App Router)", "React Server Components", "React Native", "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3 / SCSS", "Tailwind CSS", "Material UI", "Chakra UI", "Ant Design", "Bootstrap"],
   },
   {
     title: "Backend & Data",
     icon: "◇",
-    items: ["Node.js", "Express.js", "REST APIs", "GraphQL", "PostgreSQL", "Prisma ORM", "MongoDB"],
+    items: ["Node.js", "Express.js", "BFF layers", "REST APIs", "GraphQL", "PostgreSQL", "Prisma ORM", "MongoDB"],
   },
   {
     title: "State & Architecture",
     icon: "❖",
-    items: ["Redux Toolkit", "Zustand", "Context API", "Axios interceptors", "SPA / SSR", "Component design systems", "Frontend system design", "Sitecore SXA (headless)", "CMS-driven UI"],
+    items: ["Redux Toolkit", "Zustand", "Context API", "Axios interceptors", "SPA / SSR / SSG / ISR", "Streaming", "Component design systems", "Frontend system design", "Sitecore SXA (headless)", "Headless CMS-driven UI"],
   },
   {
     title: "Performance & Quality",
     icon: "✦",
-    items: ["Core Web Vitals", "Code-splitting", "Lazy loading", "Debouncing / throttling", "WCAG accessibility", "Jest", "React Testing Library", "SonarQube"],
+    items: ["Core Web Vitals", "SEO", "Code-splitting", "Lazy loading", "Debouncing / throttling", "WCAG accessibility", "Jest", "React Testing Library", "SonarQube quality gates"],
   },
   {
     title: "DevOps & Tools",
@@ -234,7 +234,7 @@ export const skillGroups = [
   {
     title: "AI-Assisted Development",
     icon: "✧",
-    items: ["Claude Code", "GitHub Copilot", "Cursor", "ChatGPT"],
+    items: ["Claude Code (agentic coding)", "GitHub Copilot", "Cursor", "ChatGPT"],
   },
 ];
 

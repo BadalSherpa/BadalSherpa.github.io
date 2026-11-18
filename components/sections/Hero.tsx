@@ -138,7 +138,7 @@ export default function Hero() {
               <RoleTicker />
               6+ years shipping <span className="text-fg">production-grade products</span> for{" "}
               <span className="text-fg">enterprise insurance and fintech</span> — fast, accessible React and Next.js
-              front ends, backed by Node.js and GraphQL APIs.
+              front ends, backed by Node.js BFF layers over REST and GraphQL.
             </p>
             <div className="hero-fade mt-8 flex flex-wrap items-center gap-3" style={at(2)}>
               <Magnetic>
